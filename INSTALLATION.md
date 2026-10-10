@@ -1,6 +1,6 @@
 # 安装顺序：一个安装包，按顺序完成首次设置
 
-适用版本：**v0.2.2-preview.2**。全程不需要终端命令。首次设置涉及 macOS 的安全确认，无法由安装器代替本人批准。
+适用版本：**v0.2.2-preview.3**。全程不需要终端命令。首次设置涉及 macOS 的安全确认，无法由安装器代替本人批准。
 
 ## 1. 先检查这台 Mac
 
@@ -8,7 +8,7 @@
 
 ## 2. 下载并安装一个文件
 
-下载 [NTFS-for-Mac-Community-0.2.2-All-in-One-arm64.pkg](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.2-preview.2/NTFS-for-Mac-Community-0.2.2-All-in-One-arm64.pkg)。不要下载 `Source code` 或 `third-party-source` 来安装。
+下载 [NTFS-for-Mac-Community-0.2.2-preview.3-All-in-One-arm64.pkg](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.2-preview.3/NTFS-for-Mac-Community-0.2.2-preview.3-All-in-One-arm64.pkg)。不要下载 `Source code` 或 `third-party-source` 来安装。
 
 双击 PKG，按安装器的「继续 → 同意 → 安装」操作，在系统窗口输入本机管理员密码。安装器包含主应用、NTFS-3G 和官方 macFUSE 5.4.0 组件；安装完成后主应用在「应用程序 → NTFS for Mac Community」。已安装同版本 macFUSE 会跳过依赖重装。不要另外拖入旧版 ZIP 中的应用。
 
@@ -53,7 +53,7 @@
 
 ## 更新或移除
 
-在社区版「设置」点击「准备更新或卸载」，等待写入停止、辅助服务注销，再正常退出。然后运行新版合并 PKG，或移除应用。安装器拒绝覆盖正在运行或仍注册服务的旧版；不要直接删除正在管理磁盘的应用。更新保留激活码，不清理用户磁盘文件。
+**更新不需要先删除或卸载应用。** 打开旧社区版，按 ⌘, 打开「设置」，点击「准备更新或卸载」，等待写入停止、辅助服务注销，再正常退出。然后运行新版合并 PKG，或移除应用。安装器拒绝覆盖正在运行或仍注册服务的旧版；不要直接删除正在管理磁盘的应用。更新保留激活码，不清理用户磁盘文件。
 
 合并安装器遇到更高/不支持的 macFUSE 版本不会自动降级；如需要升级旧 macFUSE，先正常弹出所有 FUSE 卷并退出相关软件。不必为移除此应用而删除其他软件使用的 macFUSE。
 
