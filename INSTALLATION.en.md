@@ -1,6 +1,6 @@
 # Installation and first-run setup
 
-Release **v0.2.3-preview.1**: Apple Silicon / **macOS 26.6.2 (25G83)** / macFUSE 5.4.0. Check Apple menu → About This Mac; click the OS version for its build.
+Release **v0.2.4-preview.1**: Apple Silicon / **macOS 26.6.2 (25G83)** / macFUSE 5.4.0. Check Apple menu → About This Mac; click the OS version for its build.
 
 **The All-in-One package installs components. Each macOS approval is separate.** Installation or activation success does not mean every permission is enabled.
 
@@ -18,7 +18,7 @@ If macOS separately requests approval for a macFUSE background item, allow it to
 
 ## 1. Install the All-in-One package
 
-Download [NTFS-for-Mac-Community-0.2.3-preview.1-All-in-One-arm64.pkg](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.3-preview.1/NTFS-for-Mac-Community-0.2.3-preview.1-All-in-One-arm64.pkg), double-click and follow Continue → Agree → Install. It includes the app, NTFS-3G and official macFUSE 5.4.0. Matching macFUSE is retained. The app installs to `/Applications/NTFS for Mac Community.app`; do not copy an old ZIP app. `Source code` and `third-party-source` are not installers.
+Download [NTFS-for-Mac-Community-0.2.4-preview.1-All-in-One-arm64.pkg](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.4-preview.1/NTFS-for-Mac-Community-0.2.4-preview.1-All-in-One-arm64.pkg), double-click and follow Continue → Agree → Install. It includes the app, NTFS-3G and official macFUSE 5.4.0. Matching macFUSE is retained. The app installs to `/Applications/NTFS for Mac Community.app`; do not copy an old ZIP app. `Source code` and `third-party-source` are not installers.
 
 If blocked, confirm the source, try opening once, then Privacy & Security → Open Anyway for that specific file. The app may need a separate first-open approval. Internal settings shortcuts cannot appear while the whole package/app is blocked. [Apple instructions](https://support.apple.com/102445).
 

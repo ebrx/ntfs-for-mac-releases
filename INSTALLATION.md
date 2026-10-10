@@ -1,6 +1,6 @@
 # 安装与首次设置
 
-适用版本：**v0.2.3-preview.1**；Apple Silicon（M 系列）/ **macOS 26.6.2（25G83）** / macFUSE 5.4.0。苹果菜单 → 关于本机，点击版本可查看构建号。
+适用版本：**v0.2.4-preview.1**；Apple Silicon（M 系列）/ **macOS 26.6.2（25G83）** / macFUSE 5.4.0。苹果菜单 → 关于本机，点击版本可查看构建号。
 
 **一体安装包负责安装组件，以下系统授权仍需分别开启。** 安装成功、激活成功，都不代表所有权限已经获准。请使用最新版，不要另外拖入旧 ZIP 中的应用。
 
@@ -20,7 +20,7 @@
 
 ## 1. 下载并安装一体包
 
-下载 [NTFS-for-Mac-Community-0.2.3-preview.1-All-in-One-arm64.pkg](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.3-preview.1/NTFS-for-Mac-Community-0.2.3-preview.1-All-in-One-arm64.pkg)。双击，按「继续 → 同意 → 安装」完成。
+下载 [NTFS-for-Mac-Community-0.2.4-preview.1-All-in-One-arm64.pkg](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.4-preview.1/NTFS-for-Mac-Community-0.2.4-preview.1-All-in-One-arm64.pkg)。双击，按「继续 → 同意 → 安装」完成。
 
 包含主应用、NTFS-3G 和官方 macFUSE 5.4.0；已有同版本 macFUSE 时跳过依赖重装。主应用安装到 `/Applications/NTFS for Mac Community.app`。`Source code`、`third-party-source` 都不是安装包。
 

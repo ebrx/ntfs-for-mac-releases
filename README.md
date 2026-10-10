@@ -6,17 +6,19 @@
 
 **先确认系统：当前预览版仅支持 Apple Silicon（M 系列芯片）+ macOS 26.6.2（25G83）。** 左上角苹果菜单 → 关于本机，点击系统版本查看构建号。不符合这个范围，请等待适配版本。
 
-1. [下载合并安装包（PKG）](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.3-preview.1/NTFS-for-Mac-Community-0.2.3-preview.1-All-in-One-arm64.pkg)，双击安装。包含主应用、NTFS-3G 引擎和 macFUSE 5.4.0，**不用再单独下载驱动**；已有同版本 macFUSE 会跳过重装。
+1. [下载合并安装包（PKG）](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.4-preview.1/NTFS-for-Mac-Community-0.2.4-preview.1-All-in-One-arm64.pkg)，双击安装。包含主应用、NTFS-3G 引擎和 macFUSE 5.4.0，**不用再单独下载驱动**；已有同版本 macFUSE 会跳过重装。
 2. 按 [详细安装步骤](INSTALLATION.md) 分别完成安装包/应用安全放行、两个 macFUSE 文件系统扩展开关、社区版后台服务批准及完全磁盘访问；开权限后正常退出重开。
 3. 私信作者免费领码，在应用中激活；选中自己的 NTFS 硬盘，开启写入，再从 Finder 操作文件。
 
 一体包安装组件，系统设置仍须逐项批准。扩展列表没有 macFUSE 两项时，按安装指南使用官方工具补注册当前用户；提示关机进入启动安全性实用工具时先取消，使用文件系统扩展入口。应用提示可移动卷宗但设置显示“完全磁盘访问”时，核对完全磁盘访问开关并正常退出重开。
 
-**首次设置完成、为该磁盘选择自动写入后，应用运行期间再次插入会自动检查并挂载。** 新磁盘需单独选择；拔线前正常弹出。安装合并为一个入口，macOS 的首次安全与权限确认仍需本人操作。
+**首次设置完成、为该磁盘选择自动写入后，应用运行期间再次插入会自动检查并挂载。** 新磁盘需单独选择；未提供卷 UUID 的设备每次连接后手动开启写入，不保存自动写入设置。拔线前正常弹出。安装合并为一个入口，macOS 的首次安全与权限确认仍需本人操作。
 
-[详细安装顺序](INSTALLATION.md) · [常见问题](FAQ.md) · [English installation](INSTALLATION.en.md) · [全部下载与校验值](https://github.com/ebrx/ntfs-for-mac-releases/releases/tag/v0.2.3-preview.1)
+[详细安装顺序](INSTALLATION.md) · [常见问题](FAQ.md) · [English installation](INSTALLATION.en.md) · [全部下载与校验值](https://github.com/ebrx/ntfs-for-mac-releases/releases/tag/v0.2.4-preview.1)
 
 下载区的 `Source code` 是本公开仓库的说明材料；`third-party-source` 是依赖源码。**安装只选上面的 All-in-One PKG**。
+
+**新设备兼容修复：** 0.2.4 支持 macOS 未提供卷 UUID 的 NTFS U 盘，修复写入和弹出按钮被禁用的问题。按当前连接身份及 NTFS 引导扇区序列号核对设备，继续拒绝脏卷和休眠卷。已有激活码继续有效；使用旧社区版的用户先在设置中「准备更新或卸载」、正常退出，再安装新版。
 
 **安装失败修复：** 0.2.3 修正缺失驱动时无法准备更新的流程，并保留首次安装及未找到服务的检查修复。已经被旧版卡住、提示“NTFS 依赖不可用或签名无效”的用户，请先按 [旧版恢复步骤](FAQ.md#依赖不可用或签名无效无法准备更新) 补装官方依赖，再准备更新；仅重新下载主应用无法修复正在运行的旧服务。
 

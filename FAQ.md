@@ -2,7 +2,7 @@
 
 ## 下载哪个文件？
 
-安装选 **NTFS-for-Mac-Community-0.2.3-preview.1-All-in-One-arm64.pkg**。它包含应用和 macFUSE 5.4.0，不需要另装驱动。`Source code` 是公开说明仓库的归档，`third-party-source` 是第三方源码，`SHA256SUMS` 用于核对文件完整性。
+安装选 **NTFS-for-Mac-Community-0.2.4-preview.1-All-in-One-arm64.pkg**。它包含应用和 macFUSE 5.4.0，不需要另装驱动。`Source code` 是公开说明仓库的归档，`third-party-source` 是第三方源码，`SHA256SUMS` 用于核对文件完整性。
 
 ## 是不是双击后什么都不用做？
 
@@ -14,7 +14,7 @@
 
 ## 找不到 macFUSE，或提示“尚未包含 NTFS 驱动”
 
-0.2.0 的应用安装包未包含 macFUSE 系统安装器；旧文案还错误引用了未使用的原生研究驱动状态。请先在旧社区版设置中「准备更新或卸载」并退出，再安装 **0.2.3-preview.1 All-in-One**。新版包含 macFUSE 5.4.0，修正误导提示并显示具体原因。
+0.2.0 的应用安装包未包含 macFUSE 系统安装器；旧文案还错误引用了未使用的原生研究驱动状态。请先在旧社区版设置中「准备更新或卸载」并退出，再安装 **0.2.4-preview.1 All-in-One**。新版包含 macFUSE 5.4.0，修正误导提示并显示具体原因。
 
 安装后在「系统设置 → 通用 → 登录项与扩展 → 按分类 → 文件系统扩展」开启 **macFUSE** 与 **macFUSE（local）**。若没有两项，按 [扩展补注册步骤](INSTALLATION.md#列表里没有这两项) 执行官方文件系统扩展安装命令，再关闭重开系统设置、分别开启两项；路径不存在/报错时反馈输出。
 
@@ -68,9 +68,9 @@ NTFS 日志没有正常关闭，或盘处于 Windows 休眠状态。先弹出，
 旧版在停止服务前也要求 NTFS 驱动完整，可能出现“驱动没安装 → 无法准备更新 → 合并包拒绝覆盖”的循环。0.2.3 已修正后续版本的空闲退出流程；当前运行的旧服务仍需要先恢复依赖：
 
 1. 正常弹出正在使用的 FUSE 卷，退出其他使用 macFUSE 的软件。不要强制拔线或结束写入进程。
-2. 下载并双击 [官方 macFUSE 5.4.0 恢复包](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.3-preview.1/macfuse-5.4.0.pkg)，按系统提示完成安装。此文件保持上游原始签名和全部字节；不是另一个版本的主应用。更高版本不应降级，请反馈具体版本。
+2. 下载并双击 [官方 macFUSE 5.4.0 恢复包](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.4-preview.1/macfuse-5.4.0.pkg)，按系统提示完成安装。此文件保持上游原始签名和全部字节；不是另一个版本的主应用。更高版本不应降级，请反馈具体版本。
 3. 打开「应用程序 → NTFS for Mac Community」，按 ⌘, →「准备更新或卸载」。提示已准备好后按 ⌘Q 退出。
-4. 安装 [0.2.3-preview.1 合并包](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.3-preview.1/NTFS-for-Mac-Community-0.2.3-preview.1-All-in-One-arm64.pkg)，再按安装说明启用扩展与后台服务。
+4. 安装 [0.2.4-preview.1 合并包](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.4-preview.1/NTFS-for-Mac-Community-0.2.4-preview.1-All-in-One-arm64.pkg)，再按安装说明启用扩展与后台服务。
 
 这次补装只为恢复旧版依赖，正常首次安装仍使用一个合并包。如果第 3 步仍失败，保留完整错误和安装日志反馈；该提示也可能由应用资源或签名损坏引起，不能断言所有情况都能靠补装 macFUSE 解决。不要继续反复安装或直接删除服务。
 
@@ -91,3 +91,7 @@ NTFS 日志没有正常关闭，或盘处于 Windows 休眠状态。先弹出，
 ## 提示关机、长按电源并启用启动安全性实用工具？
 
 先取消，这是 macFUSE 内核后端的授权流程。我们使用 FSKit，应在「通用 → 登录项与扩展 → 文件系统扩展」开启两项，无需进入恢复模式降低启动安全级别。正常重启提示与进入恢复模式不同；见 [重启说明](INSTALLATION.md#是否重启为什么要求关机按住电源)。[官方后端说明](https://github.com/macfuse/macfuse/wiki/Getting-Started#fskit-backend)。
+
+## 新 NTFS U 盘能识别，但写入与弹出按钮都是灰色
+
+旧版要求 macOS 提供卷 UUID，部分 NTFS U 盘（包括本次遇到的 MBR 分区设备）没有该字段。请更新到 **0.2.4-preview.1**，已有激活码仍有效。新版使用本次连接的 IOMedia 身份，并由辅助服务核对容量、原始设备和 NTFS 引导扇区序列号后处理写入；拔插后旧操作失效。该类设备支持手动开启写入与正常弹出，但不能安全记住跨拔插的自动写入同意，自动写入开关保持禁用并显示原因。不会通过格式化、修复或强制写入绕过检查。
