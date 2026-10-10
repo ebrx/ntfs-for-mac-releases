@@ -1,27 +1,81 @@
-# Install in order: one package, then first-run approvals
+# Installation and first-run setup
 
-Release: **v0.2.3-preview.1**. No Terminal commands are needed. macOS security and permission approvals must still be completed by the user.
+Release **v0.2.3-preview.1**: Apple Silicon / **macOS 26.6.2 (25G83)** / macFUSE 5.4.0. Check Apple menu → About This Mac; click the OS version for its build.
 
-1. **Check compatibility.** Apple menu → About This Mac: Apple Silicon (M-series), **macOS 26.6.2 / build 25G83**. Click the version to see its build. Other builds and Intel Macs are not currently validated; activation does not bypass compatibility checks.
-2. **Download [the All-in-One PKG](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.3-preview.1/NTFS-for-Mac-Community-0.2.3-preview.1-All-in-One-arm64.pkg)**, not `Source code` or `third-party-source`. Double-click and follow Continue → Agree → Install. Enter your Mac administrator password only in the system dialog. The package includes the app, NTFS-3G and official macFUSE 5.4.0 components. Matching macFUSE is retained. The app installs to `/Applications/NTFS for Mac Community.app`; do not additionally copy an old ZIP app.
-3. **If macOS blocks the file**, confirm the source and optional SHA256SUMS, try opening once, then System Settings → Privacy & Security → Open Anyway for this specific file. The app may require a separate first-open confirmation. This preview has no notarization, Developer ID distribution signature or outer installer signature. Open Anyway is your permission, not an Apple security endorsement. If no allow option is offered, report the message and retain system protections. Version 0.2.2 adds an Open Privacy & Security button in the setup hint, plus shortcuts in the installer welcome/completion pages. Scroll to the security section and confirm the specific blocked file yourself. If the whole PKG or app is not allowed to run yet, its internal buttons cannot appear; the first approval still uses the manual Settings path. [Apple instructions](https://support.apple.com/102445).
-4. **Enable both extensions.** System Settings → General → Login Items & Extensions → File System Extensions: enable **macFUSE** and **macFUSE (local)**. Follow system authentication/restart prompts. This FSKit backend does not require reduced startup security or disabling SIP.
-5. **Open the app from Applications** and choose Enable Disk Access. Approve the Community background helper under Login Items & Extensions when requested, then return and refresh. Only if access is denied, follow the app guidance for Files & Folders removable/network volume access; if still required, grant Full Disk Access to the installed Community app, quit normally and reopen. Never send passwords to the author.
-6. **Activate for free.** Message the author for a code, choose Free Activation, paste the complete code and confirm. No Apple ID, device identifier or network connection is needed. Save your code for reinstalls and compatible future versions using the same public key.
-7. **Connect your NTFS disk**, select its volume, enable writing and wait for writable status, then Open in Finder. Use a new test directory to check copying/renaming. After opting that disk into automatic writing, future connections are checked and mounted while the app runs. New disks require a separate choice. Login at startup is optional. Eject normally before unplugging.
+**The All-in-One package installs components. Each macOS approval is separate.** Installation or activation success does not mean every permission is enabled.
 
-Activation is free, permanent and offline. Its only purpose is to limit early testing of potentially unstable software and provide a known contact for problems and updates. It has no other purpose.
+| Separate item | Where | Purpose |
+| --- | --- | --- |
+| Installer security approval | Privacy & Security → Open Anyway for that file, if blocked | Allows only this installer |
+| App security approval | First app launch; allow that app separately if blocked | Installer approval does not cover the app |
+| macFUSE filesystem extension | General → Login Items & Extensions → File System Extensions | Enable **macFUSE** |
+| macFUSE (local) filesystem extension | Same page | Also enable **macFUSE (local)** |
+| Community background helper | App → Enable Disk Access; then Allow in Background | Allow **NTFS for Mac Community** |
+| Physical-disk access | Privacy & Security → Full Disk Access | Enable the installed **NTFS for Mac Community** app; quit and reopen |
+| Free activation | App → Free Activation | Software authorization only; it grants no OS permission |
 
-## Completion and troubleshooting
+If macOS separately requests approval for a macFUSE background item, allow it too. It is distinct from the Community helper. Enter passwords/Touch ID only in system dialogs.
 
-Activation success alone does not establish readiness: the helper and filesystem backend must be ready, and the selected disk must show writable. Switching access remounts the disk and can take a moment. Unclean or hibernated volumes are refused: connect normally on Windows, close files and safely eject before retrying. This app does not force writing or repair disks. See [FAQ](FAQ.en.md).
+## 1. Install the All-in-One package
+
+Download [NTFS-for-Mac-Community-0.2.3-preview.1-All-in-One-arm64.pkg](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.3-preview.1/NTFS-for-Mac-Community-0.2.3-preview.1-All-in-One-arm64.pkg), double-click and follow Continue → Agree → Install. It includes the app, NTFS-3G and official macFUSE 5.4.0. Matching macFUSE is retained. The app installs to `/Applications/NTFS for Mac Community.app`; do not copy an old ZIP app. `Source code` and `third-party-source` are not installers.
+
+If blocked, confirm the source, try opening once, then Privacy & Security → Open Anyway for that specific file. The app may need a separate first-open approval. Internal settings shortcuts cannot appear while the whole package/app is blocked. [Apple instructions](https://support.apple.com/102445).
+
+The app uses Apple Development signing; the outer PKG is unsigned and unnotarized. Open Anyway is your approval, not an Apple security endorsement.
+
+## 2. Register and enable both filesystem extensions
+
+System Settings → General → Login Items & Extensions → File System Extensions: enable **macFUSE** and **macFUSE (local)** separately.
+
+### If neither extension appears
+
+On the second Mac tested, macFUSE 5.4.0 files and signatures were valid, but extensions were not registered for the login user. In Terminal, as the user who will use the app, run:
+
+```bash
+/Library/Filesystems/macfuse.fs/Contents/Resources/macfuse.app/Contents/MacOS/macfuse install --components file-system-extensions
+```
+
+This selects only the filesystem-extension component. [Official component-install documentation](https://macfuse.github.io/2026/04/09/macfuse-5.2.0.html). Close and reopen System Settings, then enable both items. Registration does not replace user approval. Skip this command if both items already appear. If the path is missing or the command fails, report the output rather than repeatedly reinstalling.
+
+### Restart versus Recovery Mode
+
+Continue if no restart is requested. If the correct filesystem-extension flow requests a normal restart, save work and eject external disks normally before restarting.
+
+If asked to shut down, hold the power button, enter Startup Security Utility or select Reduced Security, cancel that flow. It belongs to the kernel backend; this app uses FSKit and does not require changing startup security in Recovery Mode. Return to **File System Extensions**. [Official backend explanation](https://github.com/macfuse/macfuse/wiki/Getting-Started#fskit-backend).
+
+## 3. Approve the Community background helper
+
+Open the app from Applications → Enable Disk Access. Allow **NTFS for Mac Community** under General → Login Items & Extensions → Allow in Background; return and refresh. This enables the helper, not the filesystem extensions or Full Disk Access.
+
+## 4. Enable Full Disk Access separately
+
+The confirmed physical-write setup is Privacy & Security → **Full Disk Access → NTFS for Mac Community: on**. If absent, use + to select the installed app in Applications.
+
+If Files & Folders shows “Full Disk Access” instead of a removable-volume toggle, go to the Full Disk Access page and check this app's switch. If removable-volume access alone still results in denial, use the same Full Disk Access path.
+
+After enabling, **quit normally with ⌘Q and reopen from Applications**, then retry writing. Closing the window is insufficient. If already enabled and reopening does not help, report the complete error so the helper state can be checked. Granting disk access to SSH, Terminal or unrelated apps is not part of this setup.
+
+## 5. Activate for free
+
+Message the author for a free code → Free Activation → paste the full code → confirm. No Apple ID, device number or network access is needed. Save the code for reinstalls and future versions using the same public key.
+
+Codes are free, permanent and offline. They only limit early testing of potentially unstable software and provide a known contact for issues and updates; there is no other purpose.
+
+## 6. Connect your disk and verify writing
+
+Connect the NTFS disk → select the correct volume → Enable Writing → wait for writable status → Open in Finder. Create a test directory and copy a file.
+
+Automatic writing is an optional choice for each disk; reconnecting the same disk is handled while the app runs. New disks require a separate choice. Login at startup is another optional setting and is not enabled by helper approval. Remounting can take a moment; eject normally before unplugging. Unclean/hibernated volumes must be safely ejected on Windows before retrying; this app does not format, repair or force writes.
 
 ## Updates and removal
 
-**Do not delete/uninstall the app before an update.** Open old Community, press ⌘, for Settings and choose Prepare for Update or Removal, wait for writing to stop and the helper to unregister, then quit normally. Run the new All-in-One PKG or remove the app. The installer refuses to overwrite a running or registered Community app. Updating retains activation and does not clean user disk files.
+Open old Community → Settings (⌘,) → Prepare for Update or Removal → wait for writing to stop and helper unregistration → quit with ⌘Q → install the new All-in-One PKG or remove the app. Do not delete a running app. Activation is retained; user disk files are not cleaned.
 
-A newer/unsupported macFUSE is not automatically downgraded. Before upgrading an older macFUSE, normally eject all FUSE volumes and quit apps using them. Do not remove shared macFUSE merely to uninstall this app. The original activation-free local app remains separate; do not let both apps manage the same disk.
+If the old app cannot prepare because dependencies are unavailable/invalid, follow [old-install recovery](FAQ.en.md#dependencies-unavailable-or-invalid-cannot-prepare-an-update) first. New packages cannot replace a still-active old service. Newer/unsupported macFUSE is not downgraded. Eject FUSE volumes and quit their apps before upgrading older macFUSE. The original activation-free local app remains separate; do not let both manage the same disk.
 
-Other-user fresh-machine installation, Community physical-disk acceptance and the complete GUI paste-activation flow have not yet been validated. This is a small-scope preview; a permanent code does not promise compatibility with every future OS or indefinite maintenance.
+## Validation status
 
-If the old app cannot prepare because dependencies are unavailable or invalid, follow the [old-install recovery steps](FAQ.en.md#dependencies-unavailable-or-invalid-cannot-prepare-an-update) before updating. The new idle cleanup fix cannot replace an already-running old helper.
+On 2026-10-10, the user confirmed successful installation on two Apple Silicon Macs; the second was reported as **M3**. Both OS installations were checked as **macOS 26.6.2 (25G83)**. The M3 Mac completed the setup above. Its self-created NTFS image passed mounting, read/write, true read-only, independent readback and normal eject. The user confirmed physical-disk writing. This setup required per-user extension registration and separate Full Disk Access approval. A clean machine completing registration through the package alone, broader hardware/OS coverage, long-term stability and all physical-disk operations remain unverified.
+
+[FAQ](FAQ.en.md) · [中文安装说明](INSTALLATION.md)
