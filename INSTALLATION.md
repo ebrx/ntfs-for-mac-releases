@@ -1,6 +1,6 @@
 # 安装与首次设置
 
-适用版本：**v0.2.4-preview.1**；Apple Silicon（M 系列）/ **macOS 26.6.2（25G83）** / macFUSE 5.4.0。苹果菜单 → 关于本机，点击版本可查看构建号。
+适用版本：**v0.2.5-preview.1**；Apple Silicon（M 系列）/ **macOS 26.6.2（25G83）** / macFUSE 5.4.0。苹果菜单 → 关于本机，点击版本可查看构建号。
 
 **一体安装包负责安装组件，以下系统授权仍需分别开启。** 安装成功、激活成功，都不代表所有权限已经获准。请使用最新版，不要另外拖入旧 ZIP 中的应用。
 
@@ -20,7 +20,7 @@
 
 ## 1. 下载并安装一体包
 
-下载 [NTFS-for-Mac-Community-0.2.4-preview.1-All-in-One-arm64.pkg](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.4-preview.1/NTFS-for-Mac-Community-0.2.4-preview.1-All-in-One-arm64.pkg)。双击，按「继续 → 同意 → 安装」完成。
+下载 [NTFS-for-Mac-Community-0.2.5-preview.1-All-in-One-arm64.pkg](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.5-preview.1/NTFS-for-Mac-Community-0.2.5-preview.1-All-in-One-arm64.pkg)。双击，按「继续 → 同意 → 安装」完成。
 
 包含主应用、NTFS-3G 和官方 macFUSE 5.4.0；已有同版本 macFUSE 时跳过依赖重装。主应用安装到 `/Applications/NTFS for Mac Community.app`。`Source code`、`third-party-source` 都不是安装包。
 
@@ -78,7 +78,7 @@
 
 连接 NTFS 硬盘 → 选中正确的卷 →「开启写入」→ 等待可写 →「在 Finder 中打开」。新建测试目录，复制一个文件确认成功。
 
-完成首次设置后，可为同一硬盘选择自动写入：应用运行期间再次插入会自动检查并挂载；新硬盘需单独选择。登录时启动是另一个可选设置，不会随后台服务授权自动开启。切换读写有重新挂载的短暂延迟，拔线前点击「弹出」并等待完成。
+完成首次设置后，可为同一硬盘选择自动写入：应用运行期间再次插入会自动检查并挂载；新硬盘需单独选择。再勾选“自动开启写入后打开 Finder”，挂载成功才打开窗口，每次连接最多自动尝试一次。无 UUID 设备使用经过验证的 NTFS 序列号和容量保存选择；身份不可读取时仍需手动操作。登录时启动是另一个可选设置，不会随后台服务授权自动开启。切换读写有重新挂载的短暂延迟，拔线前点击「弹出」并等待完成。
 
 脏卷或 Windows 休眠卷被拒绝时，在 Windows 正常连接、关闭文件并安全弹出，再接回 Mac。本应用不格式化、修复或强制写入。
 
@@ -99,6 +99,6 @@
 
 ## 当前验证情况
 
-2026-10-10，用户确认两台 Apple Silicon Mac 均安装成功，另一台为 **M3**。两台系统均已核对为 **macOS 26.6.2（25G83）**。M3 机器完成上述配置，自建 NTFS 镜像挂载读写、真正只读、独立回读和正常弹出通过，用户确认真实硬盘写入成功。本次需要补注册扩展和单独开启完全磁盘访问。尚未证明新机器始终只靠一体包即可完成扩展注册，也未完成多机、跨系统构建、长期稳定性及社区实盘全部操作的验收。
+2026-10-10，用户确认两台 Apple Silicon Mac 均安装成功，另一台为 **M3**。两台系统均已核对为 **macOS 26.6.2（25G83）**。M3 机器完成上述配置，自建 NTFS 镜像挂载读写、真正只读、独立回读和正常弹出通过，用户确认真实硬盘写入成功。本次需要补注册扩展和单独开启完全磁盘访问。尚未证明新机器始终只靠一体包即可完成扩展注册，也未完成多机、跨系统构建、长期稳定性及所有设备/元数据操作的验收。8 GB 无 UUID MBR U 盘的 Finder 复制、中文目录、改名、切换后内容回读和正常弹出已通过。
 
 [常见问题](FAQ.md) · [English installation](INSTALLATION.en.md)

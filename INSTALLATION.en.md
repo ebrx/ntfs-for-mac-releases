@@ -1,6 +1,6 @@
 # Installation and first-run setup
 
-Release **v0.2.4-preview.1**: Apple Silicon / **macOS 26.6.2 (25G83)** / macFUSE 5.4.0. Check Apple menu → About This Mac; click the OS version for its build.
+Release **v0.2.5-preview.1**: Apple Silicon / **macOS 26.6.2 (25G83)** / macFUSE 5.4.0. Check Apple menu → About This Mac; click the OS version for its build.
 
 **The All-in-One package installs components. Each macOS approval is separate.** Installation or activation success does not mean every permission is enabled.
 
@@ -18,7 +18,7 @@ If macOS separately requests approval for a macFUSE background item, allow it to
 
 ## 1. Install the All-in-One package
 
-Download [NTFS-for-Mac-Community-0.2.4-preview.1-All-in-One-arm64.pkg](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.4-preview.1/NTFS-for-Mac-Community-0.2.4-preview.1-All-in-One-arm64.pkg), double-click and follow Continue → Agree → Install. It includes the app, NTFS-3G and official macFUSE 5.4.0. Matching macFUSE is retained. The app installs to `/Applications/NTFS for Mac Community.app`; do not copy an old ZIP app. `Source code` and `third-party-source` are not installers.
+Download [NTFS-for-Mac-Community-0.2.5-preview.1-All-in-One-arm64.pkg](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.5-preview.1/NTFS-for-Mac-Community-0.2.5-preview.1-All-in-One-arm64.pkg), double-click and follow Continue → Agree → Install. It includes the app, NTFS-3G and official macFUSE 5.4.0. Matching macFUSE is retained. The app installs to `/Applications/NTFS for Mac Community.app`; do not copy an old ZIP app. `Source code` and `third-party-source` are not installers.
 
 If blocked, confirm the source, try opening once, then Privacy & Security → Open Anyway for that specific file. The app may need a separate first-open approval. Internal settings shortcuts cannot appear while the whole package/app is blocked. [Apple instructions](https://support.apple.com/102445).
 
@@ -66,7 +66,7 @@ Codes are free, permanent and offline. They only limit early testing of potentia
 
 Connect the NTFS disk → select the correct volume → Enable Writing → wait for writable status → Open in Finder. Create a test directory and copy a file.
 
-Automatic writing is an optional choice for each disk; reconnecting the same disk is handled while the app runs. New disks require a separate choice. Login at startup is another optional setting and is not enabled by helper approval. Remounting can take a moment; eject normally before unplugging. Unclean/hibernated volumes must be safely ejected on Windows before retrying; this app does not format, repair or force writes.
+Automatic writing is an optional choice for each disk; reconnecting the same disk is handled while the app runs. New disks require a separate choice. Enable “Open Finder after automatic writing” to open a window only after a successful mount; at most one automatic attempt occurs per attachment. UUID-less disks use a verified NTFS serial and capacity; missing/default serials remain manual-only. Login at startup is another optional setting and is not enabled by helper approval. Remounting can take a moment; eject normally before unplugging. Unclean/hibernated volumes must be safely ejected on Windows before retrying; this app does not format, repair or force writes.
 
 ## Updates and removal
 
@@ -76,6 +76,6 @@ If the old app cannot prepare because dependencies are unavailable/invalid, foll
 
 ## Validation status
 
-On 2026-10-10, the user confirmed successful installation on two Apple Silicon Macs; the second was reported as **M3**. Both OS installations were checked as **macOS 26.6.2 (25G83)**. The M3 Mac completed the setup above. Its self-created NTFS image passed mounting, read/write, true read-only, independent readback and normal eject. The user confirmed physical-disk writing. This setup required per-user extension registration and separate Full Disk Access approval. A clean machine completing registration through the package alone, broader hardware/OS coverage, long-term stability and all physical-disk operations remain unverified.
+On 2026-10-10, the user confirmed successful installation on two Apple Silicon Macs; the second was reported as **M3**. Both OS installations were checked as **macOS 26.6.2 (25G83)**. The M3 Mac completed the setup above. Its self-created NTFS image passed mounting, read/write, true read-only, independent readback and normal eject. The user confirmed physical-disk writing. This setup required per-user extension registration and separate Full Disk Access approval. A clean machine completing registration through the package alone, broader hardware/OS coverage, long-term stability and all device models and metadata operations remain unverified. The local 8 GB MBR USB drive passed Finder copying, Unicode directories and renaming, content verification after access-mode changes, true read-only rejection and normal eject. Its UUID-less automatic write and Finder reconnection workflow also passed in 0.2.5.
 
 [FAQ](FAQ.en.md) · [中文安装说明](INSTALLATION.md)
