@@ -6,7 +6,7 @@
 
 **先确认系统：当前预览版仅支持 Apple Silicon（M 系列芯片）+ macOS 26.6.2（25G83）。** 左上角苹果菜单 → 关于本机，点击系统版本查看构建号。不符合这个范围，请等待适配版本。
 
-1. [下载合并安装包（PKG）](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.2-preview.1/NTFS-for-Mac-Community-0.2.2-All-in-One-arm64.pkg)，双击安装。包含主应用、NTFS-3G 引擎和 macFUSE 5.4.0，**不用再单独下载驱动**；已有同版本 macFUSE 会跳过重装。
+1. [下载合并安装包（PKG）](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.2-preview.2/NTFS-for-Mac-Community-0.2.2-All-in-One-arm64.pkg)，双击安装。包含主应用、NTFS-3G 引擎和 macFUSE 5.4.0，**不用再单独下载驱动**；已有同版本 macFUSE 会跳过重装。
 2. 按 [详细安装步骤](INSTALLATION.md) 完成系统安全确认、两个 macFUSE 文件系统扩展开关和社区版后台服务批准。
 3. 私信作者免费领码，在应用中激活；选中自己的 NTFS 硬盘，开启写入，再从 Finder 操作文件。
 
@@ -14,9 +14,11 @@
 
 **首次设置完成、为该磁盘选择自动写入后，应用运行期间再次插入会自动检查并挂载。** 新磁盘需单独选择；拔线前正常弹出。安装合并为一个入口，macOS 的首次安全与权限确认仍需本人操作。
 
-[详细安装顺序](INSTALLATION.md) · [常见问题](FAQ.md) · [English installation](INSTALLATION.en.md) · [全部下载与校验值](https://github.com/ebrx/ntfs-for-mac-releases/releases/tag/v0.2.2-preview.1)
+[详细安装顺序](INSTALLATION.md) · [常见问题](FAQ.md) · [English installation](INSTALLATION.en.md) · [全部下载与校验值](https://github.com/ebrx/ntfs-for-mac-releases/releases/tag/v0.2.2-preview.2)
 
 下载区的 `Source code` 是本公开仓库的说明材料；`third-party-source` 是依赖源码。**安装只选上面的 All-in-One PKG**。
+
+**安装失败修复：** 0.2.2-preview.2 修正尚未安装 macFUSE 时被误判为版本不支持的问题；若旧包在摘要页失败，请下载上面的新版重试。
 
 ## 免费激活码说明
 

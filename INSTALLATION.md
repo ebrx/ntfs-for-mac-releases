@@ -1,6 +1,6 @@
 # 安装顺序：一个安装包，按顺序完成首次设置
 
-适用版本：**v0.2.2-preview.1**。全程不需要终端命令。首次设置涉及 macOS 的安全确认，无法由安装器代替本人批准。
+适用版本：**v0.2.2-preview.2**。全程不需要终端命令。首次设置涉及 macOS 的安全确认，无法由安装器代替本人批准。
 
 ## 1. 先检查这台 Mac
 
@@ -8,7 +8,7 @@
 
 ## 2. 下载并安装一个文件
 
-下载 [NTFS-for-Mac-Community-0.2.2-All-in-One-arm64.pkg](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.2-preview.1/NTFS-for-Mac-Community-0.2.2-All-in-One-arm64.pkg)。不要下载 `Source code` 或 `third-party-source` 来安装。
+下载 [NTFS-for-Mac-Community-0.2.2-All-in-One-arm64.pkg](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.2-preview.2/NTFS-for-Mac-Community-0.2.2-All-in-One-arm64.pkg)。不要下载 `Source code` 或 `third-party-source` 来安装。
 
 双击 PKG，按安装器的「继续 → 同意 → 安装」操作，在系统窗口输入本机管理员密码。安装器包含主应用、NTFS-3G 和官方 macFUSE 5.4.0 组件；安装完成后主应用在「应用程序 → NTFS for Mac Community」。已安装同版本 macFUSE 会跳过依赖重装。不要另外拖入旧版 ZIP 中的应用。
 
