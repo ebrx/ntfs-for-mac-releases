@@ -13,3 +13,9 @@ macFUSE 的 FSKit 系统扩展与 MFMount 框架是厂商二进制组件，不�
 第三方原许可证权利不受本项目免费激活码限制。主项目源码保持私有，依许可需公开的第三方源码与派生构建材料另行提供。
 
 [GNU 对应源码说明](https://www.gnu.org/licenses/gpl-faq.en.html) · [macFUSE 开源状态](https://github.com/macfuse/macfuse/wiki/Open-Source-Status) · [官方组件下载](https://github.com/macfuse/macfuse/releases/tag/macfuse-5.4.0)
+
+## 旧版恢复包 / Old-install recovery package
+
+`macfuse-5.4.0.pkg` 是 macFUSE 5.4.0 官方安装包的原始副本，SHA-256：`aff74591d86b2852ee98fb485a6fdc817459425d5efb00f3460fb771524c384b`。保留上游签名（Developer ID Installer: Benjamin Fleischer，Team 3T5GSNBU6W）、原始许可、安装脚本和全部字节。用于被旧版依赖检查阻塞的本应用更新恢复，不表示 macFUSE 官方背书。正常首次安装使用 All-in-One 包。
+
+The recovery file is the byte-identical original macFUSE installer, with its upstream signature, license and scripts intact. It is provided alongside this application to recover a blocked older installation; it is not an endorsement by macFUSE.
