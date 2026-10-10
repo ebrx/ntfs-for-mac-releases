@@ -1,6 +1,6 @@
 # 安装顺序：一个安装包，按顺序完成首次设置
 
-适用版本：**v0.2.1-preview.1**。全程不需要终端命令。首次设置涉及 macOS 的安全确认，无法由安装器代替本人批准。
+适用版本：**v0.2.2-preview.1**。全程不需要终端命令。首次设置涉及 macOS 的安全确认，无法由安装器代替本人批准。
 
 ## 1. 先检查这台 Mac
 
@@ -8,11 +8,13 @@
 
 ## 2. 下载并安装一个文件
 
-下载 [NTFS-for-Mac-Community-0.2.1-All-in-One-arm64.pkg](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.1-preview.1/NTFS-for-Mac-Community-0.2.1-All-in-One-arm64.pkg)。不要下载 `Source code` 或 `third-party-source` 来安装。
+下载 [NTFS-for-Mac-Community-0.2.2-All-in-One-arm64.pkg](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.2-preview.1/NTFS-for-Mac-Community-0.2.2-All-in-One-arm64.pkg)。不要下载 `Source code` 或 `third-party-source` 来安装。
 
 双击 PKG，按安装器的「继续 → 同意 → 安装」操作，在系统窗口输入本机管理员密码。安装器包含主应用、NTFS-3G 和官方 macFUSE 5.4.0 组件；安装完成后主应用在「应用程序 → NTFS for Mac Community」。已安装同版本 macFUSE 会跳过依赖重装。不要另外拖入旧版 ZIP 中的应用。
 
 **如果提示 Apple 无法验证：**确认文件来自上述作者 Release，可用随附 SHA256SUMS 核对完整性；先尝试打开一次，再进入「系统设置 → 隐私与安全性」，找到这个安装器对应的「仍要打开」，按提示确认。应用首次打开也可能需要同样确认。此包没有公证或 Developer ID 发行签名；「仍要打开」是用户允许此文件运行，不代表 Apple 已验证软件安全。[Apple 官方说明](https://support.apple.com/zh-cn/102445)。若没有允许入口，保留错误反馈，不关闭系统保护。
+
+0.2.2 的应用提示区新增「打开隐私与安全性」按钮，安装器欢迎页和完成页也提供快捷链接；打开后向下滚动至安全性区域，针对被拦截的文件自行确认「仍要打开」。**如果整个 PKG 或应用尚未获准运行，内部按钮还无法出现，首次必须按上面的系统设置路径操作。**
 
 ## 3. 开启两个文件系统扩展
 
