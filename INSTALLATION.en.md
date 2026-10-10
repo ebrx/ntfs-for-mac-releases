@@ -16,3 +16,7 @@ The existing local edition is activation-free and uses independent identifiers. 
 For updates/removal, choose Prepare for update or removal in Settings, wait until writes stop and the helper is unregistered, then quit before running the installer or removing the community app. The installer refuses to overwrite an active/registered edition. Codes and user disk files are retained.
 
 Unclean/hibernated volumes are rejected. Safely close and eject them on Windows before retrying. The app does not format, repair or force-write disks. Permanent activation is not a guarantee of support for every future OS; updated compatibility releases may be necessary. Development signing certificates also have their own lifecycle, separate from activation codes.
+
+## Why a free activation code is required
+
+The software is in early testing and may still have stability or compatibility issues. Free activation codes are intended only to keep initial testing manageable and limit how many users an unexpected issue could affect. Requesting a code by direct message also gives you a way to contact the author, report problems and find updates. There is no other purpose. Codes are free, permanent and verified offline.
