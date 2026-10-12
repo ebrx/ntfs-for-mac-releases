@@ -32,7 +32,7 @@ The all-in-one package installs the components, but you must still approve each 
 
 [English installation guide](INSTALLATION.en.md) · [English FAQ](FAQ.en.md) · [中文安装步骤](INSTALLATION.md) · [PKG checksum](downloads/SHA256SUMS) · [Current package version](downloads/latest.json)
 
-Both direct download links point to `downloads/NTFS-for-Mac-Community-latest-All-in-One-arm64.pkg`. The URLs stay the same when the package is updated. The current package is **v0.2.5-preview.1** (16,970,865 bytes, about 16.18 MiB). Gitee mirror synchronization may be delayed; check the [package metadata](downloads/latest.json) and [SHA-256 checksum](downloads/SHA256SUMS) for the version and file integrity.
+Both direct download links point to `downloads/NTFS-for-Mac-Community-latest-All-in-One-arm64.pkg`. The URLs stay the same when the package is updated. The current package is **v0.2.5-preview.1** (16,970,865 bytes, about 16.18 MiB). Gitee mirror synchronization may be delayed, and Gitee requires login for this large file’s raw download (unauthenticated requests return HTTP 403). Use the GitHub direct link for a download without login. Check the [package metadata](downloads/latest.json) and [SHA-256 checksum](downloads/SHA256SUMS) for the version and file integrity.
 
 The release page's `Source code` downloads contain this public repository's documentation; `third-party-source` contains dependency source code. **For installation, choose the All-in-One PKG linked above.**
 

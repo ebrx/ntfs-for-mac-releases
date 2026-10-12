@@ -32,7 +32,7 @@
 
 [详细安装顺序](INSTALLATION.md) · [常见问题](FAQ.md) · [English installation](INSTALLATION.en.md) · [PKG 校验值](downloads/SHA256SUMS) · [当前包版本](downloads/latest.json)
 
-两个直达下载链接都指向 `downloads/NTFS-for-Mac-Community-latest-All-in-One-arm64.pkg`，固定地址随版本更新。当前包为 **v0.2.5-preview.1**（16,970,865 字节，约 16.18 MiB），Gitee 镜像同步可能延迟；版本与 SHA-256 以 [当前包信息](downloads/latest.json) 和 [校验清单](downloads/SHA256SUMS) 为准。
+两个直达下载链接都指向 `downloads/NTFS-for-Mac-Community-latest-All-in-One-arm64.pkg`，固定地址随版本更新。当前包为 **v0.2.5-preview.1**（16,970,865 字节，约 16.18 MiB），Gitee 镜像同步可能延迟，且 Gitee 对此大文件的 raw 下载要求登录（未登录请求返回 HTTP 403）；无需登录请使用 GitHub 直达链接。版本与 SHA-256 以 [当前包信息](downloads/latest.json) 和 [校验清单](downloads/SHA256SUMS) 为准。
 
 Releases 中的 `Source code` 是本公开仓库的说明材料；`third-party-source` 是依赖源码。**安装只选上面的 All-in-One PKG**。
 
