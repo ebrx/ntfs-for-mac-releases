@@ -1,5 +1,7 @@
 # NTFS for Mac Community
 
+**简体中文** | [English](README.en.md)
+
 免费的 Mac NTFS 写入工具。SwiftUI 原生界面，中英双语，无订阅、广告或在线激活。
 
 ## 视频演示与联系作者
