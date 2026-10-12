@@ -22,7 +22,7 @@ The video shows the app switching an NTFS drive from read-only to writable, then
 
 **Check your system first: the current preview supports only Apple Silicon (M-series) Macs running macOS 26.6.2 (25G83).** Choose Apple menu → About This Mac, then click the system version to see the build number. If your configuration is outside this range, wait for a compatible release.
 
-1. [Download the all-in-one installer (PKG)](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.5-preview.1/NTFS-for-Mac-Community-0.2.5-preview.1-All-in-One-arm64.pkg) and double-click it. It includes the app, NTFS-3G engine, and macFUSE 5.4.0. **You do not need a separate driver download.** If the same macFUSE version is already installed, it skips reinstalling it.
+1. Download the all-in-one installer (PKG): [GitHub direct download](https://raw.githubusercontent.com/ebrx/ntfs-for-mac-releases/main/downloads/NTFS-for-Mac-Community-latest-All-in-One-arm64.pkg) · [Gitee direct download](https://gitee.com/ebrx/ntfs-for-mac-releases/raw/main/downloads/NTFS-for-Mac-Community-latest-All-in-One-arm64.pkg), then double-click the downloaded file. It includes the app, NTFS-3G engine, and macFUSE 5.4.0. **You do not need a separate driver download.** If the same macFUSE version is already installed, it skips reinstalling it.
 2. Follow the [English installation guide](INSTALLATION.en.md) to allow the installer/app, enable both macFUSE file-system extensions, approve the community background service, and grant Full Disk Access. After granting permissions, quit the app normally and reopen it.
 3. Send the creator a private message for a free activation code and activate it in the app. Select your NTFS drive, enable writing, and manage its files in Finder.
 
@@ -30,7 +30,9 @@ The all-in-one package installs the components, but you must still approve each 
 
 **After initial setup and enabling automatic writing for a drive, reconnecting it while the app is running triggers a check and mount automatically.** Configure new drives separately. You can also enable “Open Finder after automatically enabling writing.” For devices without a volume UUID, the app remembers your choice using a verified NTFS serial number and capacity; changes to the drive letter, name, or interface do not change that identity. If it cannot read a valid persistent identity, writing must be enabled manually. Eject normally before disconnecting. The package combines installation into one entry point; first-time macOS security and permission approvals still require your action.
 
-[English installation guide](INSTALLATION.en.md) · [English FAQ](FAQ.en.md) · [中文安装步骤](INSTALLATION.md) · [All downloads and checksums](https://github.com/ebrx/ntfs-for-mac-releases/releases/tag/v0.2.5-preview.1)
+[English installation guide](INSTALLATION.en.md) · [English FAQ](FAQ.en.md) · [中文安装步骤](INSTALLATION.md) · [PKG checksum](downloads/SHA256SUMS) · [Current package version](downloads/latest.json)
+
+Both direct download links point to `downloads/NTFS-for-Mac-Community-latest-All-in-One-arm64.pkg`. The URLs stay the same when the package is updated. The current package is **v0.2.5-preview.1** (16,970,865 bytes, about 16.18 MiB). Gitee mirror synchronization may be delayed; check the [package metadata](downloads/latest.json) and [SHA-256 checksum](downloads/SHA256SUMS) for the version and file integrity.
 
 The release page's `Source code` downloads contain this public repository's documentation; `third-party-source` contains dependency source code. **For installation, choose the All-in-One PKG linked above.**
 
@@ -66,6 +68,6 @@ The creator signs activation codes locally. The app stores only the public key. 
 
 ## Feedback and source code
 
-Include your macOS version and build number, chip, app version, and error text in reports. Do not send passwords, activation codes, or private files from your drive. Updates are published in this repository's Releases; you can also message the creator for information.
+Include your macOS version and build number, chip, app version, and error text in reports. Do not send passwords, activation codes, or private files from your drive. Download the latest installer using the GitHub / Gitee direct links above. Release notes and third-party source remain in this repository's Releases; you can also message the creator for information.
 
 The main project's source remains private. This public repository contains installers, documentation, architecture diagrams, and required corresponding third-party source materials. See [THIRD-PARTY.md](THIRD-PARTY.md) and [FREEWARE-LICENSE.txt](FREEWARE-LICENSE.txt) for components and licenses.
