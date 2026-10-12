@@ -56,11 +56,11 @@ The app is not notarized and does not have a Developer ID distribution signature
 
 ## How it works
 
-![Disk-writing architecture](images/disk-flow.svg)
+![Disk-writing architecture](images/disk-flow.en.svg)
 
 The main app handles disk detection, mount management, automatic writing, and Finder access. NTFS-3G connects through macFUSE's FSKit backend. An authenticated helper verifies the caller, disk identity, engine, and permissions. The write engine runs as a normal user. Read-only mode uses Apple's NTFS implementation. Quitting or ejecting waits for writing to stop cleanly. Dirty and hibernated volumes are rejected. The app does not format, repair, force-write, or unlock BitLocker volumes.
 
-![Offline activation architecture](images/activation-flow.svg)
+![Offline activation architecture](images/activation-flow.en.svg)
 
 The creator signs activation codes locally. The app stores only the public key. There is no online verification or cloud switch.
 
