@@ -8,13 +8,13 @@
 
 [![观看B站实机演示：NTFS 格式，读得出，写不进？](images/ntfs-community-demo-cover.png)](https://www.bilibili.com/video/BV1Lmp36JEz7/)
 
-**[点击观看首期实机演示](https://www.bilibili.com/video/BV1Lmp36JEz7/)** · B站账号：**码上实现**
+**观看实机演示：[B站（中文）](https://www.bilibili.com/video/BV1Lmp36JEz7/) · [YouTube（英文）](https://youtu.be/IVS50FnyGXk)** · 作者：**码上实现 / Code It Real**
 
 这期视频展示 NTFS for Mac Community 从软件显示只读切换到可读写，以及复制测试文件、新建文件夹和重命名的实际效果。视频使用拍摄时的社区预览版；最新下载、支持范围和安装步骤请看本仓库的说明。
 
 - **免费领码、联系作者：** 打开上方视频，点击作者头像进入「码上实现」主页，通过 **B站私信**联系我，说明想体验 NTFS for Mac Community。免费激活码的用途和有效期见下方说明。
 - **问题反馈：** 可通过 B站私信，或在 [GitHub Issues](https://github.com/ebrx/ntfs-for-mac-releases/issues) 提交问题。请附芯片型号、macOS 版本与构建号、应用版本及错误文字，方便排查。
-- **软件许愿：** 在视频评论区告诉我你想要什么软件、解决什么问题，以及具体使用场景。你的需求会作为后续工具开发的参考。
+- **软件许愿：** 在 [YouTube 视频](https://youtu.be/IVS50FnyGXk) 或 B站视频的评论区，告诉我你想要什么软件、解决什么问题，以及具体使用场景。你的需求会作为后续工具开发的参考。
 
 这里是**码上实现，你的免费软件许愿池。你提需求，我来实现。**
 

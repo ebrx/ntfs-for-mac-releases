@@ -6,15 +6,15 @@ A free NTFS write utility for Mac, with a native SwiftUI interface in Chinese an
 
 ## Video demo and contact
 
-[![Watch the real-world NTFS for Mac demo](images/ntfs-community-demo-cover.png)](https://www.bilibili.com/video/BV1Lmp36JEz7/)
+[![Watch the English NTFS for Mac demo on YouTube](images/ntfs-community-demo-cover-en.png)](https://youtu.be/IVS50FnyGXk)
 
-**[Watch the first hands-on demo on Bilibili (Chinese narration)](https://www.bilibili.com/video/BV1Lmp36JEz7/)** · Creator: **Code It Real / 码上实现**
+**Watch the hands-on demo: [YouTube (English)](https://youtu.be/IVS50FnyGXk) · [Bilibili (Chinese)](https://www.bilibili.com/video/BV1Lmp36JEz7/)** · Creator: **Code It Real / 码上实现**
 
 The video shows the app switching an NTFS drive from read-only to writable, then copying a test file, creating a folder, and renaming it. It uses the community preview available when it was recorded. For current downloads, supported configurations, and setup steps, follow this repository's documentation.
 
 - **Free activation codes and contact:** Open the video, click the creator's avatar, and send **码上实现** a private message on Bilibili. Say that you would like to try NTFS for Mac Community. See the activation section below for details.
 - **Bug reports:** Use Bilibili private messages or [GitHub Issues](https://github.com/ebrx/ntfs-for-mac-releases/issues). Include your chip, macOS version and build number, app version, and error text.
-- **Software requests:** Leave a comment on the video describing the tool you want, the problem it should solve, and your use case. These requests help guide future tools.
+- **Software requests:** Leave a comment on the [YouTube demo](https://youtu.be/IVS50FnyGXk) or the Bilibili video describing the tool you want, the problem it should solve, and your use case. These requests help guide future tools.
 
 **Code It Real — your wishlist for free software. You ask, I build.**
 
