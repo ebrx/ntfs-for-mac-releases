@@ -19,7 +19,7 @@
 
 **新用户只下载上面的 All-in-One `.pkg`。** `Source code` 是公开文档仓库归档，`third-party-source` 是依赖源码；都不是安装器。
 
-[安装顺序](INSTALLATION.md) · [获取激活码](ACTIVATION.md) · [测试通过情况](TESTED.md) · [常见问题](FAQ.md) · [历史归档](ARCHIVE.md)
+[激活图文教程](ACTIVATION-GUIDE.md) · [安装顺序](INSTALLATION.md) · [获取激活码](ACTIVATION.md) · [测试通过情况](TESTED.md) · [常见问题](FAQ.md) · [历史归档](ARCHIVE.md)
 
 ## 视频演示与联系作者
 

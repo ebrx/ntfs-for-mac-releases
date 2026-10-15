@@ -55,4 +55,6 @@ Ordinary external NTFS disks and USB drives are supported within the stated OS r
 
 ## Where do I get activation, and what has passed?
 
+Use the [illustrated activation guide](ACTIVATION-GUIDE.en.md) for exact button locations and steps.
+
 See [free activation and feedback](ACTIVATION.en.md) for the Bilibili private-message route and required machine code/app version. See [tested scope](TESTED.en.md) for the installed 0.3.0 twelve-check chain, real-drive Finder copy and user confirmation. Full macOS 27 and dedicated M5 validation remain pending. Old app installers have been withdrawn; history and corresponding sources remain archived. Use the [latest stable release](https://github.com/ebrx/ntfs-for-mac-releases/releases/latest).

@@ -58,6 +58,8 @@ After enabling, **quit normally with ⌘Q and reopen from Applications**, then r
 
 ## 5. Get a bound code, activate and wait for self-test
 
+[Follow the illustrated activation guide](ACTIVATION-GUIDE.en.md).
+
 Copy your machine code from Free Activation, then open the [Bilibili video](https://www.bilibili.com/video/BV1Lmp36JEz7/) and privately message creator **码上实现 / Code It Real** through the author profile. Send the app machine code and app version; chip and macOS version/build are recommended. Paste the full NTFSM2 reply into Free Activation. See [activation and required information](ACTIVATION.en.md).
 
 No Apple ID, raw Mac serial or payment is needed. Do not publish machine or activation codes. Legacy NTFSM1 requires free reissue. Same-Mac normal reinstalls/updates retain the code; a different Mac or major hardware identity change needs free reissue. Codes are free, perpetual and offline, to keep early use manageable and establish a feedback contact.

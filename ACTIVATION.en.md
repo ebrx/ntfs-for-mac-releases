@@ -2,6 +2,8 @@
 
 For **0.3.0**. Activation is free, perpetual and verified offline. There is no subscription, advertising or online activation.
 
+**First time? Follow the [illustrated activation guide](ACTIVATION-GUIDE.en.md)** for the Settings entry, machine code, paste field and self-test.
+
 ## Where to request a code
 
 Open the [Bilibili demonstration](https://www.bilibili.com/video/BV1Lmp36JEz7/), visit creator **码上实现 / Code It Real** through the author avatar and send a **Bilibili private message**. GitHub Issues are for public feedback; do not publish your machine code or activation code there.

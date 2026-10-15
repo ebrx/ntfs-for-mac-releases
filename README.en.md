@@ -19,7 +19,7 @@ A free NTFS write utility for Mac, with a native SwiftUI interface in Chinese an
 
 **Install only the All-in-One `.pkg` above.** `Source code` archives contain this public documentation repository; `third-party-source` contains dependency sources. Neither is an installer.
 
-[Installation](INSTALLATION.en.md) · [Activation](ACTIVATION.en.md) · [Tested scope](TESTED.en.md) · [FAQ](FAQ.en.md) · [Archived versions](ARCHIVE.md)
+[Illustrated activation](ACTIVATION-GUIDE.en.md) · [Installation](INSTALLATION.en.md) · [Activation](ACTIVATION.en.md) · [Tested scope](TESTED.en.md) · [FAQ](FAQ.en.md) · [Archived versions](ARCHIVE.md)
 
 ## Video demo and contact
 

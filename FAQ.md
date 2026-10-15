@@ -107,6 +107,8 @@ NTFS 日志没有正常关闭，或盘处于 Windows 休眠状态。先弹出，
 
 ## 从哪里领码、需要提供什么？
 
+初次操作可按[激活图文教程](ACTIVATION-GUIDE.md)逐步完成。
+
 通过 [B站视频](https://www.bilibili.com/video/BV1Lmp36JEz7/)进入作者「码上实现」主页私信，提供应用机器码和版本，建议附芯片及系统版本/构建号。无需 Mac 原始序列号或 Apple ID。详见[免费激活与反馈](ACTIVATION.md)。
 
 ## 哪些情况已通过测试？旧版本还能下载吗？
