@@ -4,6 +4,23 @@
 
 A free NTFS write utility for Mac, with a native SwiftUI interface in Chinese and English. No subscription, ads, or online activation.
 
+## Download the stable release
+
+[**Download the latest release (GitHub Releases)**](https://github.com/ebrx/ntfs-for-mac-releases/releases/latest)
+
+| Item | Details |
+| --- | --- |
+| Current version | **0.3.0** |
+| Installer | [NTFS-for-Mac-Community-0.3.0-All-in-One-arm64.pkg](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.3.0/NTFS-for-Mac-Community-0.3.0-All-in-One-arm64.pkg) |
+| Eligibility | Apple Silicon, macOS 26.4–27.x; per-Mac self-test required |
+| Included | App, NTFS-3G and official macFUSE 5.4.0 |
+| Integrity | [SHA256SUMS](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.3.0/SHA256SUMS) |
+| Activation | Free, perpetual, offline and machine-bound; [request a code](ACTIVATION.en.md) |
+
+**Install only the All-in-One `.pkg` above.** `Source code` archives contain this public documentation repository; `third-party-source` contains dependency sources. Neither is an installer.
+
+[Installation](INSTALLATION.en.md) · [Activation](ACTIVATION.en.md) · [Tested scope](TESTED.en.md) · [FAQ](FAQ.en.md) · [Archived versions](ARCHIVE.md)
+
 ## Video demo and contact
 
 [![Watch the English NTFS for Mac demo on YouTube](images/ntfs-community-demo-cover-en.png)](https://youtu.be/IVS50FnyGXk)
@@ -22,7 +39,7 @@ The video shows the app switching an NTFS drive from read-only to writable, then
 
 **0.3.0: Apple Silicon (including M5), macOS 26.4–27.x, macFUSE 5.4.0.** Installation uses a version range rather than an exact OS build whitelist. Activation and automatic disposable-image self-test must pass on this Mac before physical writing. OS, app, helper or dependency updates trigger a fresh test. Eligibility is not a claim that every chip, OS and device has been tested.
 
-1. Download the all-in-one installer (PKG): [GitHub direct download](https://raw.githubusercontent.com/ebrx/ntfs-for-mac-releases/main/downloads/NTFS-for-Mac-Community-latest-All-in-One-arm64.pkg) · Gitee mirror (new-version sync unconfirmed; use GitHub), then double-click the downloaded file. It includes the app, NTFS-3G engine, and macFUSE 5.4.0. **You do not need a separate driver download.** If the same macFUSE version is already installed, it skips reinstalling it.
+1. Open the [latest stable release](https://github.com/ebrx/ntfs-for-mac-releases/releases/latest), download the All-in-One PKG listed above and double-click it. Matching macFUSE is retained.
 2. Follow the [English installation guide](INSTALLATION.en.md) to allow the installer/app, enable both macFUSE file-system extensions, approve the community background service, and grant Full Disk Access. After granting permissions, quit the app normally and reopen it.
 3. Copy the machine code from Free Activation and send it to the creator. Paste the matching code, wait for automatic self-test to pass, and start with an expendable disk before writing in Finder.
 
@@ -30,9 +47,9 @@ The all-in-one package installs the components, but you must still approve each 
 
 **After initial setup and enabling automatic writing for a drive, reconnecting it while the app is running triggers a check and mount automatically.** Configure new drives separately. You can also enable “Open Finder after automatically enabling writing.” For devices without a volume UUID, the app remembers your choice using a verified NTFS serial number and capacity; changes to the drive letter, name, or interface do not change that identity. If it cannot read a valid persistent identity, writing must be enabled manually. Eject normally before disconnecting. The package combines installation into one entry point; first-time macOS security and permission approvals still require your action.
 
-[English installation guide](INSTALLATION.en.md) · [English FAQ](FAQ.en.md) · [中文安装步骤](INSTALLATION.md) · [PKG checksum](downloads/SHA256SUMS) · [Current package version](downloads/latest.json)
+[English installation guide](INSTALLATION.en.md) · [English FAQ](FAQ.en.md) · [中文安装步骤](INSTALLATION.md) · [PKG checksum](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.3.0/SHA256SUMS) · [Current package version](https://github.com/ebrx/ntfs-for-mac-releases/blob/main/downloads/latest.json)
 
-The fixed download path is `downloads/NTFS-for-Mac-Community-latest-All-in-One-arm64.pkg`. The URLs stay the same when the package is updated. The current package is **v0.3.0** (see metadata for its exact size). Gitee mirror synchronization may be delayed, and Gitee requires login for this large file’s raw download (unauthenticated requests return HTTP 403). Use the GitHub direct link for a download without login. Check the [package metadata](downloads/latest.json) and [SHA-256 checksum](downloads/SHA256SUMS) for the version and file integrity.
+Use **GitHub Releases** for the current version, installer filename and SHA-256. Old application installers have been withdrawn; changelogs and corresponding third-party sources remain [archived](ARCHIVE.md).
 
 The release page's `Source code` downloads contain this public repository's documentation; `third-party-source` contains dependency source code. **For installation, choose the All-in-One PKG linked above.**
 
@@ -49,6 +66,9 @@ The app is in early testing and may still have stability or compatibility issues
 NTFSM2 codes in 0.3.0 are bound to the application machine code, not an Apple ID or account. It is a domain-separated hash of the hardware UUID, not the raw Mac serial number. Nothing is automatically uploaded: users copy it to the author for signing. Both GUI and root helper derive their own host identity and verify the signature and match. Same-Mac ordinary reinstalls and updates retain the code; another Mac or major hardware identity changes require free reissue. There is no remote revocation and no claim of unbreakable DRM. Permanent licensing does not promise support for all future systems.
 
 ## Current validation scope
+
+The installed 0.3.0 build passed local 26.6.2 (25G83) installation, all twelve image checks and the additional real Drive same-directory Finder copy. The duplicate persisted, hashes matched and the user separately confirmed success. See [tested scope](TESTED.en.md) for actual results and remaining limits.
+
 
 See the [0.3.0 installation and complete image-chain evidence](validation/0.3.0.json). Full macOS 27 validation remains pending on target hardware. A TUXERA_NTFS mount belongs to another driver and cannot validate this software. Both macFUSE extensions need separate approval.
 

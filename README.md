@@ -4,6 +4,23 @@
 
 免费的 Mac NTFS 写入工具。SwiftUI 原生界面，中英双语，无订阅、广告或在线激活。
 
+## 下载正式版
+
+[**下载最新版（GitHub Releases）**](https://github.com/ebrx/ntfs-for-mac-releases/releases/latest)
+
+| 项目 | 内容 |
+| --- | --- |
+| 当前版本 | **0.3.0** |
+| 安装文件 | [NTFS-for-Mac-Community-0.3.0-All-in-One-arm64.pkg](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.3.0/NTFS-for-Mac-Community-0.3.0-All-in-One-arm64.pkg) |
+| 适用范围 | Apple Silicon（M 系列），macOS 26.4–27.x；每台 Mac 须通过自检 |
+| 包含组件 | 主应用、NTFS-3G、官方 macFUSE 5.4.0 |
+| 完整性校验 | [SHA256SUMS](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.3.0/SHA256SUMS) |
+| 授权 | 免费、永久、离线、机器码绑定；[领取步骤](ACTIVATION.md) |
+
+**新用户只下载上面的 All-in-One `.pkg`。** `Source code` 是公开文档仓库归档，`third-party-source` 是依赖源码；都不是安装器。
+
+[安装顺序](INSTALLATION.md) · [获取激活码](ACTIVATION.md) · [测试通过情况](TESTED.md) · [常见问题](FAQ.md) · [历史归档](ARCHIVE.md)
+
 ## 视频演示与联系作者
 
 [![观看B站实机演示：NTFS 格式，读得出，写不进？](images/ntfs-community-demo-cover.png)](https://www.bilibili.com/video/BV1Lmp36JEz7/)
@@ -22,7 +39,7 @@
 
 **0.3.0：Apple 芯片（含 M5）、macOS 26.4–27.x、macFUSE 5.4.0。** 不再按精确构建号限制安装；激活后必须通过本机自动镜像自检才开放实盘写入。系统、应用或依赖更新后重新自检。安装支持范围不等于所有芯片、系统和设备已验收。
 
-1. 下载合并安装包（PKG）：[GitHub 直达下载](https://raw.githubusercontent.com/ebrx/ntfs-for-mac-releases/main/downloads/NTFS-for-Mac-Community-latest-All-in-One-arm64.pkg) · Gitee 镜像（新版同步待确认，请优先使用 GitHub），下载后双击安装。包含主应用、NTFS-3G 引擎和 macFUSE 5.4.0，**不用再单独下载驱动**；已有同版本 macFUSE 会跳过重装。
+1. 从[最新正式版](https://github.com/ebrx/ntfs-for-mac-releases/releases/latest)下载上表的 All-in-One PKG，双击安装；已有同版本 macFUSE 会跳过重装。
 2. 按 [详细安装步骤](INSTALLATION.md) 分别完成安装包/应用安全放行、两个 macFUSE 文件系统扩展开关、社区版后台服务批准及完全磁盘访问；开权限后正常退出重开。
 3. 在应用「免费激活」中复制机器码私信作者，粘贴收到的绑定码；等待自动镜像自检通过，先用无重要数据的测试盘验证，再从 Finder 操作文件。
 
@@ -30,9 +47,9 @@
 
 **首次设置完成、为该磁盘选择自动写入后，应用运行期间再次插入会自动检查并挂载。** 新磁盘需单独选择；还可勾选“自动开启写入后打开 Finder”。没有卷 UUID 的设备使用经过核对的 NTFS 序列号及容量记住选择，盘符、名称或接口变化不影响识别；无法读取有效持久身份时仅手动写入。拔线前正常弹出。安装合并为一个入口，macOS 的首次安全与权限确认仍需本人操作。
 
-[详细安装顺序](INSTALLATION.md) · [常见问题](FAQ.md) · [English installation](INSTALLATION.en.md) · [PKG 校验值](downloads/SHA256SUMS) · [当前包版本](downloads/latest.json)
+[详细安装顺序](INSTALLATION.md) · [常见问题](FAQ.md) · [English installation](INSTALLATION.en.md) · [PKG 校验值](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.3.0/SHA256SUMS) · [当前包版本](https://github.com/ebrx/ntfs-for-mac-releases/blob/main/downloads/latest.json)
 
-固定下载地址使用 `downloads/NTFS-for-Mac-Community-latest-All-in-One-arm64.pkg`，固定地址随版本更新。当前包为 **v0.3.0**（实际大小见下方元数据），Gitee 镜像同步可能延迟，且 Gitee 对此大文件的 raw 下载要求登录（未登录请求返回 HTTP 403）；无需登录请使用 GitHub 直达链接。版本与 SHA-256 以 [当前包信息](downloads/latest.json) 和 [校验清单](downloads/SHA256SUMS) 为准。
+下载以 **GitHub 最新 Release** 为准，版本号、文件名与 SHA-256 一并列出。旧版安装包已撤下，变更记录和第三方源码保留[归档](ARCHIVE.md)。
 
 Releases 中的 `Source code` 是本公开仓库的说明材料；`third-party-source` 是依赖源码。**安装只选上面的 All-in-One PKG**。
 
@@ -49,6 +66,9 @@ Releases 中的 `Source code` 是本公开仓库的说明材料；`third-party-s
 0.3.0 的 NTFSM2 授权绑定应用生成的机器码，不绑定 Apple ID 或账号。机器码来自硬件 UUID 的应用专用域隔离哈希，不要求原始 Mac 序列号，不自动上传；由用户自行复制发给作者。界面和 root 辅助服务各自计算本机身份并校验签名及绑定。旧 NTFSM1 仍供旧版使用，升级需重新免费领码；同机常规重装和更新保留，换机或主板身份变化需重签。不宣称绝对防破解，离线码没有远程撤销；永久授权不等于永久支持所有系统。
 
 ## 当前验证范围
+
+当前 0.3.0 在 macOS 26.6.2（25G83）通过本机安装、十二项完整镜像自检，以及本次真实 Drive 同目录复制补充测试；用户再次亲自测试通过。副本保留、原文件哈希不变。完整环境、历史记录和剩余限制见[已验证范围](TESTED.md)。
+
 
 0.3.0 的实际本机安装、简化后的实际界面和完整镜像链路结果见 [发布验证记录](validation/0.3.0.json)。macOS 27 完整链路仍待目标机反馈；此前反馈截图中的 TUXERA_NTFS 由另一驱动挂载，不能计入本软件验收。两个 macFUSE 扩展都需独立开启。
 

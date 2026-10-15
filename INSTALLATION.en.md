@@ -56,11 +56,13 @@ If Files & Folders shows “Full Disk Access” instead of a removable-volume to
 
 After enabling, **quit normally with ⌘Q and reopen from Applications**, then retry writing. Closing the window is insufficient. If already enabled and reopening does not help, report the complete error so the helper state can be checked. Granting disk access to SSH, Terminal or unrelated apps is not part of this setup.
 
-## 5. Activate for free
+## 5. Get a bound code, activate and wait for self-test
 
-Message the author for a free code → Free Activation → paste the full code → confirm. Copy the app machine code and send it to the author first. No Apple ID, raw Mac serial number or network activation is needed. Codes are bound to that Mac and survive ordinary reinstalls and updates; major hardware identity changes require reissue. The GUI and root helper independently check the host. Legacy NTFSM1 codes require a new NTFSM2 code in 0.3.0.
+Copy your machine code from Free Activation, then open the [Bilibili video](https://www.bilibili.com/video/BV1Lmp36JEz7/) and privately message creator **码上实现 / Code It Real** through the author profile. Send the app machine code and app version; chip and macOS version/build are recommended. Paste the full NTFSM2 reply into Free Activation. See [activation and required information](ACTIVATION.en.md).
 
-Codes are free, permanent and offline. They only limit early testing of potentially unstable software and provide a known contact for issues and updates; there is no other purpose.
+No Apple ID, raw Mac serial or payment is needed. Do not publish machine or activation codes. Legacy NTFSM1 requires free reissue. Same-Mac normal reinstalls/updates retain the code; a different Mac or major hardware identity change needs free reissue. Codes are free, perpetual and offline, to keep early use manageable and establish a feedback contact.
+
+Wait for all twelve automatic disposable-image checks, including empty-FinderInfo same-volume copying, daemon restart recovery, true read-only rejection and independent readback. Physical writing remains disabled until a pass; the top prompt disappears after success. OS-build, code or dependency changes require retesting. Report a full error if it fails. Start with an expendable disk. TUXERA_NTFS belongs to another driver and does not validate this app.
 
 ## 6. Connect your disk and verify writing
 
@@ -74,12 +76,10 @@ Open old Community → Settings (⌘,) → Prepare for Update or Removal → wai
 
 If the old app cannot prepare because dependencies are unavailable/invalid, follow [old-install recovery](FAQ.en.md#dependencies-unavailable-or-invalid-cannot-prepare-an-update) first. New packages cannot replace a still-active old service. Newer/unsupported macFUSE is not downgraded. Eject FUSE volumes and quit their apps before upgrading older macFUSE. The original activation-free local app remains separate; do not let both manage the same disk.
 
-## Validation status
+## Validation and feedback
 
-On 2026-10-10, the user confirmed successful installation on two Apple Silicon Macs; the second was reported as **M3**. Both OS installations were checked as **macOS 26.6.2 (25G83)**. The M3 Mac completed the setup above. Its self-created NTFS image passed mounting, read/write, true read-only, independent readback and normal eject. The user confirmed physical-disk writing. This setup required per-user extension registration and separate Full Disk Access approval. A clean machine completing registration through the package alone, broader hardware/OS coverage, long-term stability and all device models and metadata operations remain unverified. The local 8 GB MBR USB drive passed Finder copying, Unicode directories and renaming, content verification after access-mode changes, true read-only rejection and normal eject. Its UUID-less automatic write and Finder reconnection workflow also passed in 0.2.5.
+The installed 0.3.0 build passed local macOS 26.6.2 (25G83) package upgrade, signature/payload verification, machine-bound activation, all twelve image checks and the previously failing real Drive same-directory Finder copy. The duplicate persisted, hashes matched and the user separately tested successfully. Historical M3/8 GB UUID-less USB results and remaining limits are documented in [tested scope](TESTED.en.md).
 
-[FAQ](FAQ.en.md) · [中文安装说明](INSTALLATION.md)
+For feedback send app version, chip, OS version/build, disk filesystem/capacity, actions and complete error. No password, activation code or private file is needed. See the [contact and feedback checklist](ACTIVATION.en.md).
 
-## Automatic self-test in 0.3.0
-
-After machine-bound activation, the root helper orchestrates disposable-image read/write, daemon restart recovery, true read-only rejection, independent readback and normal eject. Physical writing stays disabled until it passes. Updates to the actual OS build, app, helper or dependencies invalidate the receipt and trigger a fresh test. Start with an expendable disk. A TUXERA_NTFS mount is owned by another driver and does not validate this software. Both macFUSE extensions must be enabled independently.
+[Latest release](https://github.com/ebrx/ntfs-for-mac-releases/releases/latest) · [Activation](ACTIVATION.en.md) · [FAQ](FAQ.en.md) · [中文](INSTALLATION.md)

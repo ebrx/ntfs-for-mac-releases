@@ -4,8 +4,8 @@
 | --- | --- |
 | Which download should I install? | Choose `NTFS-for-Mac-Community-0.3.0-All-in-One-arm64.pkg`. It contains the app and macFUSE 5.4.0. `Source code` contains public repository documentation; `third-party-source` is dependency source, not an installer. |
 | Is installation completely automatic? | One package installs the components. You must still approve macOS security prompts, both filesystem extensions, the Community helper, and activate for free. Follow [the installation order](INSTALLATION.en.md). |
-| Apple cannot verify the package? | This preview is unnotarized and its outer installer is unsigned. Confirm its source, try opening once, then Privacy & Security → Open Anyway for that file. The setup hint and installer pages now include Privacy & Security shortcuts. They are unavailable while the whole package/app is blocked from running; use the manual Settings path for the first approval. Keep Gatekeeper and SIP enabled. [Apple instructions](https://support.apple.com/102445). |
-| “NTFS driver not bundled,” or no macFUSE extensions? | The 0.2.0 app-only package omitted the macFUSE system installer and had misleading legacy research-driver text. Prepare the old app for update and quit, install 0.2.3 All-in-One, then enable both macFUSE and macFUSE (local) extensions. If absent, follow the per-user registration command in the installation guide, then reopen Settings and enable both items. |
+| Apple cannot verify the package? | This release is unnotarized and its outer installer is unsigned. Confirm its source, try opening once, then Privacy & Security → Open Anyway for that file. The setup hint and installer pages now include Privacy & Security shortcuts. They are unavailable while the whole package/app is blocked from running; use the manual Settings path for the first approval. Keep Gatekeeper and SIP enabled. [Apple instructions](https://support.apple.com/102445). |
+| “NTFS driver not bundled,” or no macFUSE extensions? | The 0.2.0 app-only package omitted the macFUSE system installer and had misleading legacy research-driver text. Prepare the old app for update and quit, install the current 0.3.0 All-in-One, then enable both macFUSE and macFUSE (local) extensions. If absent, follow the per-user registration command in the installation guide, then reopen Settings and enable both items. |
 | Activated but still read-only? | Verify Apple Silicon / macOS 26.4–27.x, a successful current-build automatic self-test, macFUSE 5.4.0, both extensions enabled, helper approved and Community Full Disk Access separately enabled; quit with ⌘Q and reopen after approval. Select your disk and explicitly enable writing. Activation does not grant OS permissions or override safety checks. Report the full status text. |
 | “unclean file system”? | Normally connect on Windows, close files and safely eject, then retry on Mac. Do not bypass journal/hibernation checks; the app does not force writes or repair disks. |
 | “Permission denied” or /dev/fd/0 errors? | Check the current All-in-One version, extension/helper approvals and permission guidance, then quit normally and reopen. Do not chmod device nodes or drivers. Report the full error if it persists. |
@@ -26,7 +26,7 @@ For feedback provide macOS version/build, M-series chip, app version, complete e
 Older helpers incorrectly require a working NTFS backend even when no writer exists. For an already-blocked old installation:
 
 1. Eject FUSE volumes normally and quit other macFUSE applications. Do not interrupt a writer.
-2. Install the [original signed macFUSE 5.4.0 recovery package](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.5-preview.1/macfuse-5.4.0.pkg). Do not downgrade a newer macFUSE version.
+2. Download the [official macFUSE 5.4.0 disk image](https://github.com/macfuse/macfuse/releases/download/macfuse-5.4.0/macfuse-5.4.0.dmg); open the DMG and run its PKG installer. Do not downgrade a newer macFUSE version.
 3. Open the old Community app → Settings (⌘,) → Prepare for update or removal; after success, quit with ⌘Q.
 4. Install the [0.3.0 All-in-One package](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.3.0/NTFS-for-Mac-Community-0.3.0-All-in-One-arm64.pkg).
 
@@ -52,3 +52,7 @@ Some NTFS devices, including the MBR USB drive encountered during testing, do no
 ## Can I use different external devices?
 
 Ordinary external NTFS disks and USB drives are supported within the stated OS range; labels, ports and BSD disk numbers do not bind consent. A 1 TB Drive and an 8 GB MBR USB drive have been tested. Enable automatic writing separately for each new disk; optionally enable Finder opening after automatic writing. The app must be running. A reformatted disk with a new identity requires a new choice. Exact volume clones can share UUIDs/serials and cannot always be distinguished. BitLocker is unsupported; dirty/hibernated volumes remain read-only. Not every device model or metadata operation has been verified.
+
+## Where do I get activation, and what has passed?
+
+See [free activation and feedback](ACTIVATION.en.md) for the Bilibili private-message route and required machine code/app version. See [tested scope](TESTED.en.md) for the installed 0.3.0 twelve-check chain, real-drive Finder copy and user confirmation. Full macOS 27 and dedicated M5 validation remain pending. Old app installers have been withdrawn; history and corresponding sources remain archived. Use the [latest stable release](https://github.com/ebrx/ntfs-for-mac-releases/releases/latest).

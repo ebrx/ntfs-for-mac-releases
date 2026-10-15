@@ -14,8 +14,8 @@ macFUSE 的 FSKit 系统扩展与 MFMount 框架是厂商二进制组件，不�
 
 [GNU 对应源码说明](https://www.gnu.org/licenses/gpl-faq.en.html) · [macFUSE 开源状态](https://github.com/macfuse/macfuse/wiki/Open-Source-Status) · [官方组件下载](https://github.com/macfuse/macfuse/releases/tag/macfuse-5.4.0)
 
-## 旧版恢复包 / Old-install recovery package
+## 旧版依赖恢复
 
-`macfuse-5.4.0.pkg` 是 macFUSE 5.4.0 官方安装包的原始副本，SHA-256：`aff74591d86b2852ee98fb485a6fdc817459425d5efb00f3460fb771524c384b`。保留上游签名（Developer ID Installer: Benjamin Fleischer，Team 3T5GSNBU6W）、原始许可、安装脚本和全部字节。用于被旧版依赖检查阻塞的本应用更新恢复，不表示 macFUSE 官方背书。正常首次安装使用 All-in-One 包。
+旧应用因依赖缺失无法准备更新时，从 [macFUSE 官方 5.4.0 Release](https://github.com/macfuse/macfuse/releases/tag/macfuse-5.4.0) 下载官方 DMG，打开后运行其中的 PKG；不要安装旧版社区应用。安装器原始 PKG 的 SHA-256 为 `aff74591d86b2852ee98fb485a6fdc817459425d5efb00f3460fb771524c384b`。不降级更高版本。正常首次安装仍只用本项目当前 All-in-One。完整顺序见[恢复步骤](FAQ.md#依赖不可用或签名无效无法准备更新)。
 
-The recovery file is the byte-identical original macFUSE installer, with its upstream signature, license and scripts intact. It is provided alongside this application to recover a blocked older installation; it is not an endorsement by macFUSE.
+For dependency recovery use the official macFUSE 5.4.0 DMG and its original PKG. This project no longer offers old application installers. Normal installation uses the current All-in-One. See the [English recovery steps](FAQ.en.md#dependencies-unavailable-or-invalid-cannot-prepare-an-update).
