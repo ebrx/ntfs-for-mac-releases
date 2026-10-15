@@ -1,6 +1,6 @@
 # Installation and first-run setup
 
-Release **v0.2.5-preview.1**: Apple Silicon / **macOS 26.6.2 (25G83)** / macFUSE 5.4.0. Check Apple menu → About This Mac; click the OS version for its build.
+Release **v0.3.0**: Apple Silicon / **macOS 26.4–27.x** / macFUSE 5.4.0. Exact OS builds no longer restrict installation; automatic disposable-image self-test must pass on each Mac.
 
 **The All-in-One package installs components. Each macOS approval is separate.** Installation or activation success does not mean every permission is enabled.
 
@@ -18,7 +18,7 @@ If macOS separately requests approval for a macFUSE background item, allow it to
 
 ## 1. Install the All-in-One package
 
-Download [NTFS-for-Mac-Community-0.2.5-preview.1-All-in-One-arm64.pkg](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.2.5-preview.1/NTFS-for-Mac-Community-0.2.5-preview.1-All-in-One-arm64.pkg), double-click and follow Continue → Agree → Install. It includes the app, NTFS-3G and official macFUSE 5.4.0. Matching macFUSE is retained. The app installs to `/Applications/NTFS for Mac Community.app`; do not copy an old ZIP app. `Source code` and `third-party-source` are not installers.
+Download [NTFS-for-Mac-Community-0.3.0-All-in-One-arm64.pkg](https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.3.0/NTFS-for-Mac-Community-0.3.0-All-in-One-arm64.pkg), double-click and follow Continue → Agree → Install. It includes the app, NTFS-3G and official macFUSE 5.4.0. Matching macFUSE is retained. The app installs to `/Applications/NTFS for Mac Community.app`; do not copy an old ZIP app. `Source code` and `third-party-source` are not installers.
 
 If blocked, confirm the source, try opening once, then Privacy & Security → Open Anyway for that specific file. The app may need a separate first-open approval. Internal settings shortcuts cannot appear while the whole package/app is blocked. [Apple instructions](https://support.apple.com/102445).
 
@@ -58,7 +58,7 @@ After enabling, **quit normally with ⌘Q and reopen from Applications**, then r
 
 ## 5. Activate for free
 
-Message the author for a free code → Free Activation → paste the full code → confirm. No Apple ID, device number or network access is needed. Save the code for reinstalls and future versions using the same public key.
+Message the author for a free code → Free Activation → paste the full code → confirm. Copy the app machine code and send it to the author first. No Apple ID, raw Mac serial number or network activation is needed. Codes are bound to that Mac and survive ordinary reinstalls and updates; major hardware identity changes require reissue. The GUI and root helper independently check the host. Legacy NTFSM1 codes require a new NTFSM2 code in 0.3.0.
 
 Codes are free, permanent and offline. They only limit early testing of potentially unstable software and provide a known contact for issues and updates; there is no other purpose.
 
@@ -79,3 +79,7 @@ If the old app cannot prepare because dependencies are unavailable/invalid, foll
 On 2026-10-10, the user confirmed successful installation on two Apple Silicon Macs; the second was reported as **M3**. Both OS installations were checked as **macOS 26.6.2 (25G83)**. The M3 Mac completed the setup above. Its self-created NTFS image passed mounting, read/write, true read-only, independent readback and normal eject. The user confirmed physical-disk writing. This setup required per-user extension registration and separate Full Disk Access approval. A clean machine completing registration through the package alone, broader hardware/OS coverage, long-term stability and all device models and metadata operations remain unverified. The local 8 GB MBR USB drive passed Finder copying, Unicode directories and renaming, content verification after access-mode changes, true read-only rejection and normal eject. Its UUID-less automatic write and Finder reconnection workflow also passed in 0.2.5.
 
 [FAQ](FAQ.en.md) · [中文安装说明](INSTALLATION.md)
+
+## Automatic self-test in 0.3.0
+
+After machine-bound activation, the root helper orchestrates disposable-image read/write, daemon restart recovery, true read-only rejection, independent readback and normal eject. Physical writing stays disabled until it passes. Updates to the actual OS build, app, helper or dependencies invalidate the receipt and trigger a fresh test. Start with an expendable disk. A TUXERA_NTFS mount is owned by another driver and does not validate this software. Both macFUSE extensions must be enabled independently.

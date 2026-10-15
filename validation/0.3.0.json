@@ -1,0 +1,117 @@
+{
+  "schema": 1,
+  "version": "0.3.0",
+  "build": 10,
+  "tested_at": "2026-10-15",
+  "actual_system": {
+    "version": "26.6.2",
+    "build": "25G83",
+    "architecture": "arm64"
+  },
+  "installation": {
+    "local_upgrade_pkg_passed": true,
+    "installed_payload_identical_to_signed_build": true,
+    "matching_macfuse_retained": true,
+    "clean_machine_installation_tested": false
+  },
+  "activation": {
+    "machine_bound_offline_perpetual": true,
+    "legacy_generic_rejected": true,
+    "matching_machine_accepted": true,
+    "signed_other_machine_code_rejected": true,
+    "helper_independent_activation_gate_passed": true
+  },
+  "image_chain": {
+    "passed": true,
+    "root_status_confirmed": true,
+    "checks": [
+      "bad_registry_rejected",
+      "bad_serial_rejected",
+      "daemon_restart",
+      "independent_readback",
+      "normal_eject",
+      "ordinary_image",
+      "process_identity",
+      "raw_rw",
+      "readonly_EROFS",
+      "readonly_image_hash",
+      "same_mount_source",
+      "same_volume_copy"
+    ],
+    "context": {
+      "appSHA256": "4aa884dca083cc91b7e0b9dc9339742a40ee053d05b2bb8858d3dcc7f6662d40",
+      "helperSHA256": "cd7805c45a3462bf1c75186240fe64d4893db2374055d8d99c00427617d52321",
+      "policySHA256": "36252fd499038d4f6730586e4e294905fef600ba5d0ebedf4936f0386b4c8dd6",
+      "fingerprint": {
+        "asset/sbin/ntfscp": "80cf15845f2e3fb2907bc37018d27f0a9965c0e6e5280c483debe5137a14a3f6",
+        "asset/lib/libintl.8.dylib": "426ab888e3b214f18f451de47d9575d6774ba9cd3a8545b948d299ec1edca09e",
+        "system_build": "25G83",
+        "asset/sbin/mkntfs": "ecdfff1221be683a95d2f960915e7b4bd299bdacaf0d9e8a79b42fff919b16e9",
+        "asset/lib/libfuse.2.dylib": "e74cba34a9ccade6187b8be8557f95b755b97dfbebab16490aee0ada93d8b42e",
+        "io.macfuse.app.fsmodule.macfuse.appex": "67dbe612ff2dce36f84e0179084d59765106eab29ddb367a119805fc9d654e40",
+        "engine": "f2db040a363f1e6266277e51ff7158fc57d413773d91e2c97fa9fb0a312bccc2",
+        "asset/bin/ntfs-3g.probe": "2eff733de964260d4329435c89259736817e4d359e863b3c3e5d027955628e8d",
+        "asset/framework/MFMount": "e63b1a477d2ae0df65aec1d09707108476d9e4adbe2004f9f6aba9cd1c276fa6",
+        "io.macfuse.app.fsmodule.macfuse-local.appex": "41f526620f0ece172dad37b332ecc9f13ef98daa0e03c194d0daf57b55e08b98",
+        "asset/lib/libntfs-3g.90.dylib": "45935f0cac648ed270fb9656d8edabcab9b34cc2f8a3fec5d74bbf784b330455",
+        "asset/bin/ntfscat": "4d0b35d1e1445204deb94d5123a4fafae2cafffb6d1ff8541479d90d95a246e1",
+        "asset/bin/ntfs-3g": "f2db040a363f1e6266277e51ff7158fc57d413773d91e2c97fa9fb0a312bccc2"
+      }
+    }
+  },
+  "eligibility": {
+    "minimum": "26.4.0",
+    "maximum_exclusive": "28.0.0",
+    "exact_build_install_whitelist": false,
+    "updates_invalidate_runtime_evidence": true
+  },
+  "physical_disk_tested_in_0_3_0": true,
+  "macos27_complete_chain_tested": false,
+  "m5_specific_hardware_tested": false,
+  "all_device_metadata_behaviors_tested": false,
+  "original_25G83_receipt_unchanged": true,
+  "packaged_root_pass_fabricated": false,
+  "notarized": false,
+  "installer_signed": false,
+  "source_commit": "1f7314cf965fe3955ecca08ee31cf3fa14bbfa6b",
+  "physical_disk_writable_mount_observed_in_0_3_0": true,
+  "physical_file_operations_tested_in_0_3_0": true,
+  "physical_write_evidence": "Final signed engine installed locally; Finder Cmd+C/Cmd+V on the previously failing project guide retained the complete 5818-byte duplicate with the original SHA-256 unchanged. User confirmed the fix worked. No original files were modified or deleted.",
+  "agent_created_physical_test_files": true,
+  "ui": {
+    "passed_banner_hidden": true,
+    "normal_window_verified": true,
+    "pending_one_line_details_on_demand": true,
+    "packaged_translation_keys": 172
+  },
+  "physical_file_operations_after_ui_polish_tested": true,
+  "copy_regression": {
+    "root_cause": "Existing zero-length com.apple.FinderInfo stream exposed to Darwin copyfile caused ERANGE and Finder removed its incomplete destination.",
+    "fix": "Read-only normalization to the 32-byte default on Darwin; FSKit can expose the default as absent. No on-disk FinderInfo mutation.",
+    "disposable_image_old_engine_failure_reproduced": true,
+    "disposable_image_foundation_and_finder_copy_passed": true,
+    "runtime_same_and_other_directory_copy_included": true,
+    "root_independent_copy_content_readback": true,
+    "physical_finder_duplicate_retained": true,
+    "original_content_unchanged": true,
+    "user_confirmed": true,
+    "all_metadata_behaviors_verified": false
+  },
+  "engine_receipts": {
+    "historical_25G83_preserved": true,
+    "new_engine_independent_25G83_image_validation_passed": true,
+    "new_engine_sha256": "f2db040a363f1e6266277e51ff7158fc57d413773d91e2c97fa9fb0a312bccc2"
+  },
+  "package": {
+    "filename": "NTFS-for-Mac-Community-0.3.0-All-in-One-arm64.pkg",
+    "size_bytes": 17125122,
+    "sha256": "51b286bc9adc59c61db27bc312a40ee15e4233f7bb4c764135cc23a06c9bf2fb"
+  },
+  "checks": {
+    "xctest_passed": 8,
+    "swift_testing_passed": 21,
+    "swift_testing_skipped": 1,
+    "python_tests_passed": 26,
+    "translation_keys_verified": 172
+  }
+}

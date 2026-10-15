@@ -6,7 +6,7 @@
 - **gettext 1.0 / libintl**：保留 LGPL 声明，提供同版本源码与已记录的 Homebrew 构建来源。
 - **macFUSE 5.4.0**：合并安装包包含官方安装器的 Core 和 PreferencePane 组件，组件载荷、安装脚本、BOM 与 PackageInfo 保持字节一致，完整保留官方 License.rtf。原官方 PKG SHA-256 为 `aff74591d86b2852ee98fb485a6fdc817459425d5efb00f3460fb771524c384b`。这是本项目制作的合并安装包，不是 macFUSE 官方产品，也不表示厂商背书。
 
-[v0.2.1-preview.1 Release](https://github.com/ebrx/ntfs-for-mac-releases/releases/tag/v0.2.1-preview.1) 提供 `NTFS-for-Mac-third-party-source-0.2.1.tar.gz`，包含 NTFS-3G/gettext 对应源码、macFUSE libfuse 2（commit `fe59bf43f1a2f249ed8d82c7d28739121ee703a2`）与 libfuse 3（commit `00e9044ac2b6349eab5cd9dc8792e1a0544e9e54`）源码、Darwin FD 适配补丁、构建和重定位脚本、许可证、来源清单与重建说明。请核对 Release 的 SHA256SUMS。
+[v0.3.0 Release](https://github.com/ebrx/ntfs-for-mac-releases/releases/tag/v0.3.0) 提供 `NTFS-for-Mac-third-party-source-0.3.0.tar.gz`，包含 NTFS-3G/gettext 对应源码、macFUSE libfuse 2（commit `fe59bf43f1a2f249ed8d82c7d28739121ee703a2`）与 libfuse 3（commit `00e9044ac2b6349eab5cd9dc8792e1a0544e9e54`）源码、Darwin FD 适配及空 FinderInfo 读取补丁、构建和重定位脚本、许可证、来源清单与重建说明。FinderInfo 补丁不改写磁盘数据。请核对 Release 的 SHA256SUMS。旧版依赖材料仍随对应历史 Release 保留。
 
 macFUSE 的 FSKit 系统扩展与 MFMount 框架是厂商二进制组件，不声称全部开源或由本项目维护。[macFUSE 许可证](https://github.com/macfuse/macfuse/blob/master/LICENSE.txt) 对商业打包另有要求；此社区预览版免费、无广告、无付费授权，按非商业再分发条款保留原许可。后续如转为商业打包，须重新核对并取得所需许可。
 
