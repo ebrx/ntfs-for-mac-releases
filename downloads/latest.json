@@ -1,6 +1,6 @@
 {
   "release": "v0.3.0",
-  "published_at": "2026-10-15T12:47:12.460815Z",
+  "published_at": "2026-10-15T12:59:12Z",
   "source_filename": "NTFS-for-Mac-Community-0.3.0-All-in-One-arm64.pkg",
   "source_url": "https://github.com/ebrx/ntfs-for-mac-releases/releases/download/v0.3.0/NTFS-for-Mac-Community-0.3.0-All-in-One-arm64.pkg",
   "filename": "NTFS-for-Mac-Community-latest-All-in-One-arm64.pkg",
@@ -8,5 +8,6 @@
   "sha256": "51b286bc9adc59c61db27bc312a40ee15e4233f7bb4c764135cc23a06c9bf2fb",
   "prerelease": false,
   "eligibility": "Apple Silicon; macOS >=26.4.0 and <28.0.0; per-Mac root-owned image self-test required",
-  "activation": "free perpetual offline machine-bound NTFSM2; legacy NTFSM1 codes require free reissue"
+  "activation": "free perpetual offline machine-bound NTFSM2; legacy NTFSM1 codes require free reissue",
+  "release_page": "https://github.com/ebrx/ntfs-for-mac-releases/releases/tag/v0.3.0"
 }
