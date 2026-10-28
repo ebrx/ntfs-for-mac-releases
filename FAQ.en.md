@@ -57,4 +57,8 @@ Ordinary external NTFS disks and USB drives are supported within the stated OS r
 
 Use the [illustrated activation guide](ACTIVATION-GUIDE.en.md) for exact button locations and steps.
 
-See [free activation and feedback](ACTIVATION.en.md) for the Bilibili private-message route and required machine code/app version. See [tested scope](TESTED.en.md) for the installed 0.3.0 twelve-check chain, real-drive Finder copy and user confirmation. Full macOS 27 and dedicated M5 validation remain pending. Old app installers have been withdrawn; history and corresponding sources remain archived. Use the [latest stable release](https://github.com/ebrx/ntfs-for-mac-releases/releases/latest).
+See [free activation and feedback](ACTIVATION.en.md) for the Bilibili private-message route and required machine code/app version. See [tested scope](TESTED.en.md) for the installed 0.3.0 twelve-check chain, real-drive Finder copy and user confirmation. macOS 27.2 has a successful-operation report; full-chain evidence and dedicated M5 validation remain pending. Old app installers have been withdrawn; history and corresponding sources remain archived. Use the [latest stable release](https://github.com/ebrx/ntfs-for-mac-releases/releases/latest).
+
+## Does it run on macOS 27.2?
+
+Update on **2026-10-28**: the author confirmed successful operation after upgrading the local Mac to **macOS 27.2 (26B123)**. The installed app is still **0.3.0 (build 10)** and its executable matches the published build. This is post-upgrade user feedback; a twelve-check self-test export and itemized physical-disk test report have not been collected for this OS. It does not validate every macOS 27 build, chip or device. Follow setup approvals, automatic self-test and an expendable-drive first test as before. This report requires no replacement installer or activation code. See [tested scope](TESTED.en.md).

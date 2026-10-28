@@ -1,6 +1,14 @@
 # Tested scope
 
-Updated **2026-10-15**. Current stable release: **0.3.0**. [Machine-readable evidence](validation/0.3.0.json).
+Updated **2026-10-28**. Current stable release: **0.3.0**. [Machine-readable evidence](validation/0.3.0.json).
+
+## macOS 27.2 post-upgrade feedback
+
+Update on **2026-10-28**: the author confirmed successful operation after upgrading the local Mac to **macOS 27.2 (26B123)**. The installed app is still **0.3.0 (build 10)** and its executable matches the published build. This is post-upgrade user feedback; a twelve-check self-test export and itemized physical-disk test report have not been collected for this OS. It does not validate every macOS 27 build, chip or device.
+
+[Supplemental feedback record](validation/2026-10-28-macos27.2-feedback.json). The installer, eligibility range and safety checks are unchanged.
+
+## October 15: detailed macOS 26.6.2 validation
 
 | Check | Actual result |
 | --- | --- |
@@ -21,7 +29,7 @@ Older 0.2.x builds were installed on two Apple Silicon Macs running 26.6.2 (25G8
 
 ## Eligibility and remaining limits
 
-Apple Silicon (including the M5 architecture) on macOS 26.4–27.x may attempt per-Mac self-test without an exact-build install whitelist. This is not proof of every chip/system/device combination. Full macOS 27 validation, a dedicated M5 Mac, clean-machine package-only extension registration, long-term multi-Mac stability and all metadata operations remain pending.
+Apple Silicon (including the M5 architecture) on macOS 26.4–27.x may attempt per-Mac self-test without an exact-build install whitelist. This is not proof of every chip/system/device combination. Complete itemized evidence on macOS 27.2, other macOS 27 builds, a dedicated M5 Mac, clean-machine package-only extension registration, long-term multi-Mac stability and all metadata operations remain pending.
 
 Actual OS build, code, policy and dependency changes invalidate the root-owned receipt and require retesting. Historical 25G83 evidence is unchanged. Signature, dependency hash, disk identity, dirty-volume and hibernation checks remain enforced. TUXERA_NTFS is another driver's mount and does not validate this app.
 

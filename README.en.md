@@ -67,10 +67,14 @@ NTFSM2 codes in 0.3.0 are bound to the application machine code, not an Apple ID
 
 ## Current validation scope
 
+Update on **2026-10-28**: the author confirmed successful operation after upgrading the local Mac to **macOS 27.2 (26B123)**. The installed app is still **0.3.0 (build 10)** and its executable matches the published build. This is post-upgrade user feedback; a twelve-check self-test export and itemized physical-disk test report have not been collected for this OS. It does not validate every macOS 27 build, chip or device.
+
+[27.2 feedback record](validation/2026-10-28-macos27.2-feedback.json).
+
 The installed 0.3.0 build passed local 26.6.2 (25G83) installation, all twelve image checks and the additional real Drive same-directory Finder copy. The duplicate persisted, hashes matched and the user separately confirmed success. See [tested scope](TESTED.en.md) for actual results and remaining limits.
 
 
-See the [0.3.0 installation and complete image-chain evidence](validation/0.3.0.json). Full macOS 27 validation remains pending on target hardware. A TUXERA_NTFS mount belongs to another driver and cannot validate this software. Both macFUSE extensions need separate approval.
+See the [0.3.0 installation and complete image-chain evidence](validation/0.3.0.json). Post-upgrade successful operation has been reported on macOS 27.2; independent full-chain evidence for that OS is still pending. A TUXERA_NTFS mount belongs to another driver and cannot validate this software. Both macFUSE extensions need separate approval.
 
 The validated environment is Apple Silicon, macOS 26.6.2 / 25G83, and macFUSE 5.4.0. Tests passed for reading/writing a locally created NTFS image, recovery after restarting the helper service, true read-only mode, normal ejection, and activation checks. The all-in-one package's app bytes, signature, and original macFUSE components were checked for consistency. Local installer options were confirmed to skip the same installed macFUSE version.
 

@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "reported_at": "2026-10-28",
+  "source": "Author statement in development conversation, with local OS and installed-app metadata checks",
+  "system": {
+    "version": "27.2",
+    "build": "26B123",
+    "build_observed_locally": true
+  },
+  "application": {
+    "version": "0.3.0",
+    "build": "10",
+    "executable_matches_published_release": true
+  },
+  "user_report": "Successful operation after upgrading the local Mac to macOS 27.2",
+  "evidence_scope": "Post-upgrade operation feedback; not a newly executed itemized validation suite",
+  "new_twelve_check_export_collected": false,
+  "new_itemized_physical_rw_report_collected": false,
+  "hardware_model_recorded": false,
+  "historical_25G83_evidence_preserved": true,
+  "installer_changed": false,
+  "activation_scheme_changed": false,
+  "all_macos27_builds_validated": false
+}

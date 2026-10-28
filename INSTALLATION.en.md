@@ -80,6 +80,8 @@ If the old app cannot prepare because dependencies are unavailable/invalid, foll
 
 ## Validation and feedback
 
+Update on **2026-10-28**: the author confirmed successful operation after upgrading the local Mac to **macOS 27.2 (26B123)**. The installed app is still **0.3.0 (build 10)** and its executable matches the published build. This is post-upgrade user feedback; a twelve-check self-test export and itemized physical-disk test report have not been collected for this OS. It does not validate every macOS 27 build, chip or device.
+
 The installed 0.3.0 build passed local macOS 26.6.2 (25G83) package upgrade, signature/payload verification, machine-bound activation, all twelve image checks and the previously failing real Drive same-directory Finder copy. The duplicate persisted, hashes matched and the user separately tested successfully. Historical M3/8 GB UUID-less USB results and remaining limits are documented in [tested scope](TESTED.en.md).
 
 For feedback send app version, chip, OS version/build, disk filesystem/capacity, actions and complete error. No password, activation code or private file is needed. See the [contact and feedback checklist](ACTIVATION.en.md).
